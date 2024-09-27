@@ -23,4 +23,5 @@ li.done{
 /*combining combiners*/
 ul p.done{
     color:orange;
+    font-size: 4rem;
 }
