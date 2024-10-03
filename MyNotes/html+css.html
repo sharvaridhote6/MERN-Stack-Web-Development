@@ -1,17 +1,28 @@
-GENERAL TIPS:
+                                                    USE MDN REFERENCES FOR MOST CASES
+
+
+GENERAL TIPS:                                      
 <!--
 make sure to watch videos >=10 mins completely and then code, not alongside. Do it only when the video is longer than 10 mins, bookmark the 
 difficult chapters, come back to it and do it till you understand completely, or go to Apna College course and do it. Make sure to understand 
 it though, If you get stuck go to stack overflow, and think that you're a complete actual programmer now, a professional and its a part of your 
 skilled intelligent hardwork which you gotta do in order to succeed, even if its tough, you're worth it!-->
 
-
+BASICS:
 <!--
 <>- angle brackets, as a whole is a tag, <xyz>hgk </xyz> is an element, there are headings till 6, no 7, H1 is the biggest and h6 is the 
 smallest heading, only give heading h1, preferably have only one of it, no skipping of levels, and go only till h6, give paragraph tags on new 
 lines and br tags on same lines, void element does not have any content in between those tags- <hr/> = horizontal line for differentiating 2lines 
-or paras, type of a break element, one more is <br/>, a complete line can be commented out by ctrl+/
+or paras, type of a break element, one more is <br/>, a complete line can be commented out by ctrl+/-->
 
+IMG and ANCHOR TAGS:<!--
+in an image we can add title to the src and while hovering on the img we can get that title, <img src="imgcopyaddr" title/width etc alt="incase pic
+doesnt load"/>, an anchor tag is used for href links, to redirect on another page or link using <a href="pglink">text here goes on the link</a>
+similarly video can be done, <video src="link" width/height etc. controls></video>, action in html is used to specify where the data is stored
+after submitting the data, when we have to use an href attribute to link something and want it to open on a new page, then we can use-
+<a href="link" target="_blank"></a> attribute--> 
+
+LISTS:<!--
 unordered lists are in bullet points and ordered are in numbered points, for nesting a list in another one, start just after the element in that,
 nest the list before the </li> of the list you're nesting in, for more goto index2.html, anchors create hyperlinks to web pages - href ,i.e,
 a link can be added, we can convert the link to any text, img src is used for source of images and alt for alternate text description, 
@@ -34,10 +45,18 @@ We can add !important; keyword to give 1st priority. Order for type- importance 
 If its h1- element, or id- #something, classes- .something, then acc to the order written they will be applied for chaining for combining 
 selectors. "z-index" can be used to put the element behind others on the screen using -1, default z index for everything is 0 on screen.-->
 
-FLOAT:<!-- 
+FLOAT:<!-- S
 this property applies only on the img feature not on text/paragraph, every text around img gets wrapped up around it, incase we want to remove 
 something, we can place the name of what we want to remove and use the word "clear" : left/right, although float should only be used to do basic
 things like wrap text around an image-->
+
+TABLES:<!-- tables contain table rows table headings and table data named tr and th and td resp ,use mdn reference by hovering it on keywords 
+to have detailed info as to what to do and how to use it, special characs are started with & sign, eg- &copy is used for copywright marks
+<caption></caption> tag is used to highlight the short title or the main brief content of what is in the table, tr- row, td- data, th- header
+td and th are used inside tr, to wrap table body, header and foot, we use tbody thead tfoot, emmet shortut to write lists are li*x after
+<ul> etc . When we're creating an <article></>, common prac is to have <section></section> -->\
+
+FORMS:<!--forms are used to put some input into, or use label tags etc-->
 
 
 BUTTON:
@@ -51,7 +70,7 @@ we can use em for that specific element, if suppose we want to not let the paddi
 text in it, then we can use 1em in order to keep that padding same for all sized fonts, values setting for em is in relation to parent or self,
 rems is for root element eg-<html> and parent can be class name -->
 
-
+TOOLTIP: <!--this is used to show some text by hovering on a certain text -->
 DIV:(CONTENT DIVISION ELEMENTS)
 <!--
 div is used to create a block like structure, meaning if you give some id to div, then you can style and put different things in it by using 
@@ -76,7 +95,7 @@ it means that the whole width is given to one block. headings are block elements
 
 Inline elements- are unaffected by width height etc, although padding can be done in it. A span is an inline element, used to group elements 
 using <span></span>, it does not set width and height,it can set border ,it can set margin and padding that too only for left and right, 
-for inline only the amount of the text will be considered hence the block will be adjusting itself only w that.
+for inline only the amount of the text will be considered hence the block will be adjusting itself only w that. images are inline elements.
 
 Inline block- means using both the properties, when we have to align blocks in one line , using only inline they can be aligned but no other 
 property will be considered, and using block the whole line will go to one block, hence to keep blocks algined on one line w all props this is 
@@ -87,3 +106,4 @@ MEDIA QUERY:<!--
 in this the responsiveness of the website can be done, (min width) (max width) range can be set with @media and we can use "and" with spaces on
 both sides of the word keyword to set range, and then set properties in it, we can change its orientation from portrait to landscape
 -->
+
