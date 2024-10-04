@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #1a1a1a;
+            margin:0;
+            padding:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        h2{
+            color: darkblue;
+        }
+        .card{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px
+        }
+        /* aligning boxes can be done using teh follwoing flexbox properties or by a br tag */
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            /* we can use this attribute or style input directly  */
+        /* }
+        input{
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border:none;
+            background-color: rgb(208, 214, 219); */
+        }
+        button{
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(208, 214, 219);
+        }
+        button:hover{
+            background-color: lightblue;
+        }
+        </style>
+</head>
+<body>
+    <!-- <h1 style= "color :white">Login page</h1> this is inline -->
+    <div class="card">
+        <h2>Login page</h2>
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</bodyinput 
+</html>

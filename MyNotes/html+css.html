@@ -9,7 +9,7 @@ it though, If you get stuck go to stack overflow, and think that you're a comple
 skilled intelligent hardwork which you gotta do in order to succeed, even if its tough, you're worth it!-->
 
 BASICS:
-<!--
+<!--  ()-parenthesis,[]-brackets,{}-braces
 <>- angle brackets, as a whole is a tag, <xyz>hgk </xyz> is an element, there are headings till 6, no 7, H1 is the biggest and h6 is the 
 smallest heading, only give heading h1, preferably have only one of it, no skipping of levels, and go only till h6, give paragraph tags on new 
 lines and br tags on same lines, void element does not have any content in between those tags- <hr/> = horizontal line for differentiating 2lines 
@@ -48,8 +48,8 @@ FORMS:<!--forms are used to put some input into, or use label tags etc-->
 BUTTON:
 <!--using <button>xyz</button> we can create a button feature-->
 
-TOOLTIP: <!--this is used to show some text by hovering on a certain text -->
-
+TOOLTIP: <!--this is used to show some text by hovering on a certain text, syntax-
+<p title="This is a tooltip text">Here the tooltip is shown</p> -->
 
 
 
@@ -81,7 +81,7 @@ rems is for root element eg-<html> and parent can be class name -->
 DIV:(CONTENT DIVISION ELEMENTS)
 <!--
 div is used to create a block like structure, meaning if you give some id to div, then you can style and put different things in it by using 
-properties in its css -->
+properties in its css, shortcut to create div class is type "div.(class name)" and hitting enter -->
 
 To create a circle in CSS-
 <!--
@@ -96,21 +96,63 @@ radius will be 50 px-->
 
 
 DISPLAY:
-<!--
+<!-- Padding is always inside, margin is outside , border boxing means the margin+padding+border for a box
+when any bg color is added it gives its own margin and padding sometimes, hence we should remove it in the start, keeping margin:0;, 
+padding:0; vh- viewport height can be added as a unit to cover the entire viewport space on the screen using height attribute, it means
+that even if the page is shrinked the 100vh keeps everything in the middle of the page.
+gap attribute can be used to create gaps w pixels in between a class.
+
 Block property- in css display file is used to line everything ,(the full width of the container or browser window if there is no container)
-it means that the whole width is given to one block. headings are block elements. 
+it means that the whole width is given to one block. headings are block elements. In block elements when width is set to 300px, it means the true
+width is 300 itself, excluding padding, margin or border
 
 Inline elements- are unaffected by width height etc, although padding can be done in it. A span is an inline element, used to group elements 
 using <span></span>, it does not set width and height,it can set border ,it can set margin and padding that too only for left and right, 
 for inline only the amount of the text will be considered hence the block will be adjusting itself only w that. images are inline elements.
+When we say in inline elements the width is 300 px, that means it has padding+ margin + border included in it, 300 is not the actual width unlike
+block elements 
 
 Inline block- means using both the properties, when we have to align blocks in one line , using only inline they can be aligned but no other 
 property will be considered, and using block the whole line will go to one block, hence to keep blocks algined on one line w all props this is 
 used.
 -->
 
+SELECTORS:
+<!--Ideally the selectors are read from right to left.
+Parents, child, and descandents are there. DOM-document object model, this is the ability to change your html code into a tree/object model 
+which can be rendered on the browser. 
+1) Universal selector- this selectes everything and sits on the top of the code, for eg if we keep margin:0; all the text will get applied w it
+2) Type selector- its the general selector what we noramlly use, target an element and style it
+3)Class Selector -target classes using . and style them 
+4) ID selector- have ideally only one unique # on one web page, #xyz {go ahead and style it}
+5)Attribute selector- selects and attribute and styles, input[type="text"]{border:px solid/dashed color, etc}
+
+80-90% of CSS SELECTORS ARE DONE ABOVE SINCE THEY'RE THE MAJOR ONES- BELOW ARE THE NOT MUCH USED, ONLY DONE BY THE ONES WHO WANT MASTERY IN CSS
+
+6)Descandent selector- 
+
+
+-->
+
+AFTER KEYWORD:<!--it creates a pseudo element that is the last of selected element, it is inline, -->
+
+
+
+
+
 MEDIA QUERY:<!-- 
 in this the responsiveness of the website can be done, (min width) (max width) range can be set with @media and we can use "and" with spaces on
 both sides of the word keyword to set range, and then set properties in it, we can change its orientation from portrait to landscape
 -->
 
+
+                                        ------------FLEXBOX-------------
+<!--
+display:flex;
+justify-content:center;
+align-items:center;   
+used in login page, this is used to align everything in the center, justify content is used for x axis, and align items is used for y axis
+
+display:flex;
+flex-direction: column -reverse(reverse the order makes it asc to dec)/
+                column(aligns everything into columns)

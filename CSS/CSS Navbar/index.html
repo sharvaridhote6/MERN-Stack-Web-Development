@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            font-family:Arial, Helvetica, sans-serif;
+            margin:0;
+            padding:0;
+            background-color: rgb(59, 57, 57);
+            color:white;
+            margin-left:10px;
+        } 
+        h2{
+            margin-bottom:10px; 
+        }
+        .nav1 ul{
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding:20px;
+            list-style: none;
+        }
+        .asd{
+            display: flex;
+            background-color: white;
+            list-style: none;
+            padding:10px;
+            gap:10px;
+            justify-content: space-around;
+            margin-left: 0px;
+        }
+        .nav3 li{
+            background-color: blueviolet;
+            color: bisque;
+            display: inline;
+            text-decoration: none;
+        }
+        .nav1 a{
+            text-decoration: none;
+            color:white;
+            border-radius: 10px;
+            padding:10px;
+            background-color:rgb(69, 64, 64);
+            padding: 5px 22px;
+            position:relative;
+        }
+        .nav1 .login-btn{
+            background-color: rgb(55, 61, 110);
+            color: white;
+            font-size:medium;
+            padding: 5px 15px;
+        }
+
+/* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
+where exactly we want it to hover and the "content" gives us what to hover*/
+        .nav1 a::after{
+            content:"__";/*this gets stored after all nav1 a elements*/
+            position:absolute;
+            height:2px;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color: black;
+            transform:scaleX(0);
+            transition:transform 0.3s
+            ease-in-out;
+        }
+        .nav1 a:hover::after{
+            transform: scaleX(1);
+        }
+        /* nav1 ul madhe child property is used and nav2 madhe we'll create a div differently and give a class to it to style */
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h2>Variation 1: Horizontal with underline effect</h2>
+        <nav class="nav1">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><button class="login-btn">Login</button></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="nav-container">
+        <h2>Variation 2: Vertical with hover effect</h2>
+        <nav class="nav2">
+          <ul>
+            <div class="asd">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            </div>
+          </ul>
+          <button class="login-btn">Login</button>
+        </nav>
+      </div>
+  
+      <div class="nav-container">
+        <h2>Variation 3: Horizontal with dropdown</h2>
+        <nav class="nav3">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#">About</a>
+              <div class="dropdown-content">
+                <a href="#">Our Story</a>
+                <a href="#">Team</a>
+                <a href="#">Contact</a>
+              </div>
+            </li>
+            <li><a href="#">Products</a></li>
+            <li><button class="login-btn">Login</button></li>
+          </ul>
+        </nav>
+      </div>
+</body>
+</html>
