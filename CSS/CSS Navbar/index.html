@@ -23,21 +23,15 @@
             padding:20px;
             list-style: none;
         }
-        .asd{
+        /* .asd{
             display: flex;
             background-color: white;
             list-style: none;
             padding:10px;
             gap:10px;
             justify-content: space-around;
-            margin-left: 0px;
-        }
-        .nav3 li{
-            background-color: blueviolet;
-            color: bisque;
-            display: inline;
-            text-decoration: none;
-        }
+            margin-left: 0px; }*/
+
         .nav1 a{
             text-decoration: none;
             color:white;
@@ -52,6 +46,30 @@
             color: white;
             font-size:medium;
             padding: 5px 15px;
+        }
+        .nav2{
+          background-color: green;
+          width:200px;
+          height:200px;
+
+        }
+        .nav2 ul{
+          list-style-type: none;
+          margin: 0;
+        }
+        .nav2 ul li{
+          margin-bottom: 12px;
+          padding-top: 12px;
+        }
+        .nav2 ul li a{
+          display: block;
+          text-decoration: none;
+          color: white;
+          padding: 5px;
+           width :100%; /*100percemt of the container*/
+        }
+        .nav2 ul li a:hover{
+          background-color: green;
         }
 
 /* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
@@ -91,11 +109,9 @@ where exactly we want it to hover and the "content" gives us what to hover*/
         <h2>Variation 2: Vertical with hover effect</h2>
         <nav class="nav2">
           <ul>
-            <div class="asd">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Products</a></li>
-            </div>
           </ul>
           <button class="login-btn">Login</button>
         </nav>
