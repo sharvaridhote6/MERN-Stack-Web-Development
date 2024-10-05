@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navbar creation</title>
     <style>
          body{
             font-family:Arial, Helvetica, sans-serif;
@@ -22,6 +22,7 @@
             background-color: white;
             padding:20px;
             list-style: none;
+            align-items: center;
         }
         /* .asd{
             display: flex;
@@ -46,35 +47,8 @@
             color: white;
             font-size:medium;
             padding: 5px 15px;
-        }
-        .nav2{
-          background-color: green;
-          width:200px;
-          height:200px;
 
-        }
-        .nav2 ul{
-          list-style-type: none;
-          margin: 0;
-        }
-        .nav2 ul li{
-          margin-bottom: 12px;
-          padding-top: 12px;
-        }
-        .nav2 ul li a{
-          display: block;
-          text-decoration: none;
-          color: white;
-          padding: 5px;
-           width :100%; /*100percemt of the container*/
-        }
-        .nav2 ul li a:hover{
-          background-color: green;
-        }
-
-/* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
-where exactly we want it to hover and the "content" gives us what to hover*/
-        .nav1 a::after{
+        .nav1 a::after {
             content:"__";/*this gets stored after all nav1 a elements*/
             position:absolute;
             height:2px;
@@ -90,6 +64,78 @@ where exactly we want it to hover and the "content" gives us what to hover*/
             transform: scaleX(1);
         }
         /* nav1 ul madhe child property is used and nav2 madhe we'll create a div differently and give a class to it to style */
+        
+        }
+        .nav2{
+          background-color: green;
+          width:200px;
+          height:200px;
+          padding:10px;
+        }
+        .nav2 ul{
+          list-style-type: none;
+          margin: 0;
+          text-align: left;
+        }
+        .nav2 ul li{
+          margin-bottom: 12px;
+          padding-top: 12px;
+        }
+        .nav2 ul li a{
+          display: block;
+          text-decoration: none;
+          color: white;
+          padding: 5px;
+           /*100percemt of the container*/
+        }
+        .nav2 ul li a:hover{
+          background-color: rgb(103, 196, 103);
+        }
+        .nav2 .login-btn{
+          background-color: rgb(7, 55, 7);
+          color: white;
+          padding: 10px 5px;
+          border-radius: 5px;
+          border: none;
+          width:100%;
+        }
+        .nav2 .login-btn:hover{
+          border: 1px solid white;
+        }
+
+        .nav3{
+          background-color:rgb(55, 175, 202);
+          
+        }
+        .nav3 ul{
+          list-style:none;
+          display:flex;
+          justify-content: space-around;
+          padding:10px;
+          align-items: center;
+        }
+    
+        .nav3 ul li a{
+            text-decoration: none;
+            color: white;
+            padding:5px;
+            display: block;
+        }
+        /* in nav3 the dropdown-content class needs to be hovered from dropdown class */
+        .nav3 .dropdown:hover .dropdown-content{
+            display: block;
+            position:absolute;
+            background-color:rgb(55, 175, 202);
+            color: white;
+            width: 120px;
+        }
+        .nav3 .dropdown-content{
+          display: none;
+    
+        }
+/* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
+where exactly we want it to hover and the "content" gives us what to hover*/
+        
     </style>
 </head>
 <body>

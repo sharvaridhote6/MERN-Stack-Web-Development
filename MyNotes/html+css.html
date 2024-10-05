@@ -70,9 +70,10 @@ something, we can place the name of what we want to remove and use the word "cle
 things like wrap text around an image-->
 
 
-FONT SIZE:
-<!--border-width can be set in a cw direction, say if we set 0px 10px 15px 20 px, then it will be resp for top right bottom left. we can also 
-provide 2 values, the first one will be for top+bottom and second for left+right. Font size can be used as px or rem or em, px gives you the 
+FONT AND FONT SIZE:
+<!--you can go on google fonts and select the font you like, get that font and copy the code they give you in your style css and change the font-fam 
+to what it says border-width can be set in a cw direction, say if we set 0px 10px 15px 20 px, then it will be resp for top right bottom left. we can 
+also provide 2 values, the first one will be for top+bottom and second for left+right. Font size can be used as px or rem or em, px gives you the 
 direct sixe, em gives you the size as to double of px, meaning if size is 10 px,then 3em will be 30 px. For setting padding margin width height 
 we can use em for that specific element, if suppose we want to not let the padding given to an element change when we change the font size of the 
 text in it, then we can use 1em in order to keep that padding same for all sized fonts, values setting for em is in relation to parent or self,
@@ -104,7 +105,7 @@ gap attribute can be used to create gaps w pixels in between a class.
 
 Block property- in css display file is used to line everything ,(the full width of the container or browser window if there is no container)
 it means that the whole width is given to one block. headings are block elements. In block elements when width is set to 300px, it means the true
-width is 300 itself, excluding padding, margin or border
+width is 300 itself, excluding padding, margin or border, eg of block is div
 
 Inline elements- are unaffected by width height etc, although padding can be done in it. A span is an inline element, used to group elements 
 using <span></span>, it does not set width and height,it can set border ,it can set margin and padding that too only for left and right, 
@@ -138,6 +139,8 @@ which can be rendered on the browser.
 
 AFTER KEYWORD:<!--it creates a pseudo element that is the last of selected element, it is inline, -->
 
+ <!--to target a specific input field in the form to style, you can use input[type="email/pass etc"]{}
+ required word is used after specifying these in input field to put the necessary toggle-->
 
 MEDIA QUERY:<!-- 
 in this the responsiveness of the website can be done, (min width) (max width) range can be set with @media and we can use "and" with spaces on
@@ -147,7 +150,17 @@ both sides of the word keyword to set range, and then set properties in it, we c
 
                                         ------------FLEXBOX-------------
 <!--
-display:flex;
+2 major things- main access- moves from left to right and other access
+style="flex-wrap:wrap" is used for moving the lements onto the next line since by default they are plced in one line from l to r only
+when we set height to auto it doesnt take up extra space, style "order" is used to control child inside container specifically,
+flex-grow is another peoperty used to give the ratio to the elements, again it targeets specifically the child emelents inside.
+align-self is used to specifically work on each element in detail, all this is shown is flexbox file.
+
+
+
+
+
+display:flex; (is in a row structure by deafult since main access is from left to right)
 justify-content:center;
 align-items:center;   
 used in login page, this is used to align everything in the center, justify content is used for x axis, and align items is used for y axis
