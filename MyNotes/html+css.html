@@ -62,7 +62,13 @@ In CSS, positioning of code is vv imp. From outside to in it goes- margin-border
 (class selector starts w a dot),if 2 of same thing are there, position rule applies- last one is considered. Order- inline, internal, external. 
 We can add !important; keyword to give 1st priority. Order for type- importance keyw, inline internal, class specificity, position. 
 If its h1- element, or id- #something, classes- .something, then acc to the order written they will be applied for chaining for combining 
-selectors. "z-index" can be used to put the element behind others on the screen using -1, default z index for everything is 0 on screen.-->
+selectors. "z-index" can be used to put the element behind others on the screen using -1, default z index for everything is 0 on screen.
+Static positioning- does not have any effect anywhwere, no top no bottom no left no right
+relative- the styling applied to this is relative to its parent div
+absolute- this is relative to its closest positioned ancestor, whichever closest parent has positions mentioned, hence for absolute to work it needs
+to be placed in nested divs w parent div positioned properly.
+fixed- is the position fixed on the screen, it is removed from the document and its position is fixed on the screen 
+-->
 
 FLOAT:<!-- S
 this property applies only on the img feature not on text/paragraph, every text around img gets wrapped up around it, incase we want to remove 
@@ -95,6 +101,8 @@ border-radius: is used to make the edges round, 50% OR 100px; these are max valu
 half of the position value will be the border radius in order to make a circle, for eg- if width and height are 100ox each, then its border
 radius will be 50 px-->
 
+BOX-SHADOW-<!--offset means the space given from top/bottom etc, called as top offset etc. syntax is box shadow: horizontal-offset vertical-offset
+blur-radius-->
 
 DISPLAY:
 <!-- Padding is always inside, margin is outside , border boxing means the margin+padding+border for a box
@@ -111,7 +119,8 @@ width is 300 itself, excluding padding, margin or border, eg of block is div
 -->
 Inline elements-<!-- are unaffected by width height etc, although padding can be done in it. A span is an inline element, used to group elements 
 using <span></span>, it does not set width and height,it can set border ,it can set margin and padding that too only for left and right, 
-for inline only the amount of the text will be considered hence the block will be adjusting itself only w that. images are inline elements.
+for inline only the amount of the text will be considered hence the block will be adjusting itself only w that. Span means how much area is 
+covered on the page by an element. images are inline elements.
 When we say in inline elements the width is 300 px, that means it has padding+ margin + border included in it, 300 is not the actual width unlike
 block elements -->
 
@@ -131,8 +140,10 @@ which can be rendered on the browser.
 
 80-90% of CSS SELECTORS ARE DONE ABOVE SINCE THEY'RE THE MAJOR ONES- BELOW ARE THE NOT MUCH USED, ONLY DONE BY THE ONES WHO WANT MASTERY IN CSS
 
-6)Descandent selector- 
-
+6)Descandent selector- targets descandent elements, ones which are children of children 
+7)Child selector- targets directly children elements 
+8) Adjacent sibling selector- h1+p, meaning p being an adj selector of h1 we can choose and style it
+9) general sibling selector- chooses all the siblings, eg - h2 ~ p means all paragraph siblings of h2  
 -->
 
 
@@ -143,19 +154,26 @@ AFTER KEYWORD:<!--it creates a pseudo element that is the last of selected eleme
  <!--to target a specific input field in the form to style, you can use input[type="email/pass etc"]{}
  required word is used after specifying these in input field to put the necessary toggle-->
 
+
+
+                             -----------RESPONSIVENESS---------
+RESPONSIVE BREAKPOINT- <!--is when the background colour or any styling changes when media query is applied and the page is changed -->                             
+
 MEDIA QUERY:<!-- 
 in this the responsiveness of the website can be done, (min width) (max width) range can be set with @media and we can use "and" with spaces on
-both sides of the word keyword to set range, and then set properties in it, we can change its orientation from portrait to landscape
+both sides of the word keyword to set range, and then set properties in it, we can change its orientation from portrait to landscape, media query
+is css in itself you have to mention where you are applying the styling, using that specific class
 -->
 
 
                                         ------------FLEXBOX-------------
 <!--
 2 major things- main access- moves from left to right and other access
-style="flex-wrap:wrap" is used for moving the lements onto the next line since by default they are plced in one line from l to r only
-when we set height to auto it doesnt take up extra space, style "order" is used to control child inside container specifically,
-flex-grow is another peoperty used to give the ratio to the elements, again it targeets specifically the child emelents inside.
-align-self is used to specifically work on each element in detail, all this is shown is flexbox file.
+style="flex-wrap:wrap" is used for moving the elements onto the next line since by default they are plced in one line from l to r only
+when we set height to auto it doesnt take up extra space,this can be done one a normal page by using width 100% and height 100vh
+style "order" is used to control child inside container specifically, flex-grow is another peoperty used to give the ratio to the elements,
+again it targeets specifically the child emelents inside. align-self is used to specifically work on each element in detail, all this is shown
+is flexbox file.
 
 display:flex; (is in a row structure by deafult since main access is from left to right)
 justify-content:center;
@@ -164,8 +182,19 @@ used in login page, this is used to align everything in the center, justify cont
 
 display:flex;
 flex-direction: column -reverse(reverse the order makes it asc to dec)/
-                column(aligns everything into columns)-->
+                column(aligns everything into columns)
 
+align-content aligns acc to container
+align items aligns acc to the groups
+align-self aligns acc to the specific particular element
+
+align-contents: space-between/space-around/baseline/space evenly 
+space between-the space around the items the cross axis will get distributed evenly between the rows
+space around- similatr to betn but there will be even space var and khali of the first and last rows 
+space evenly -spaces out everything evenly
+baseline-similar to flex start by default 
+align-self: flex-end/start/baseline
+-->
 
                                                -------------GRID-----------
 <!-- specify the rows and colums you want, grid divides the whole page into 100% and fr is one fraction, and this is done w the help of gtc-
@@ -180,3 +209,6 @@ than one, and in styling the div <"grid area: header;">Header</div> , while in p
 AUTOFIT-<!--this is similar to flexwrap, it fits the contents in the page even if you change its dimensions, its coded like-
 <style="gtc-repeat(auto-fit,minmax(100px,1fr))"  meaning the elements will have 100px max and will shift down if page gets smaller-->       
                      
+                                       ----------------BOOTSTRAP----------------
+<!--no need to explicitely learn bootstrap, we can go on its website and using our normal css we can read its docs and copy paste the code we want 
+for that -->

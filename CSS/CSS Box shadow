@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .shadow-box{
+            width:200px;
+            height:200px;
+            box-shadow: 10px 10px 15px gray; 
+            background-color: green;
+            border-radius: 20px;
+            border:3px solid black;
+        }
+    </style>
+</head>
+<body>
+     <div class="shadow-box">
+    </div>
+</body>
+</html>
+
+
+
+
+

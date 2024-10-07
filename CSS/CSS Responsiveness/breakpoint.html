@@ -1,0 +1,52 @@
+<!-- responsive breakpoint is -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            height:100vh;
+            /* height 100vh brings the text in the middle of the page */
+            background-color: #271f1f;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .responsive-div{
+            width:100%;
+            max-width:1200px;
+            font-size : 20px;
+            background-color: rgb(217, 75, 98);
+            padding:20px;
+        }
+
+        @media(min-width:600px) and (max-width:750px) {
+            body{
+                align-items: flex-start;
+/* this will show that the text will be on the top till width 600 which is mostly the phone size */
+            }
+            .responsive-div{
+                background-color: aquamarine;
+            }
+        }
+
+        @media(max-width:900px) and (min-width:751px){
+            body{
+                align-items:center;
+            }
+            .responsive-div{
+                background-color:blueviolet;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-div">This div changes color acc to size of the page</div>
+</body>
+</html>
