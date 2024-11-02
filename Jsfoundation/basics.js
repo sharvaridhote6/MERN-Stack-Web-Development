@@ -39,5 +39,35 @@ myscore++
 
 let credits=56;
 credits--;
-
 // comparison operation
+let num1=3
+let num2=3
+let num3=6
+
+console.log(num1==num2);
+console.log(num1!=num3);
+console.log(num1<num3);
+console.log(num1>num3);
+
+
+
+//logical operators
+// &&- and
+// || -or
+// !- reverse
+
+let isloggedin=true;
+let ispaid=false;
+console.log(isloggedin && ispaid);
+
+let isemailuser=true;
+let isgoogleuser=true;
+console.log(isemailuser || isgoogleuser);
+ 
+
+//assignment ops
+let num7=10
+num7 /=7
+num7 +=7
+console.log(num7);
+

@@ -7,4 +7,22 @@ to something else by overriding it-->
 tree, after this we get the JIT just in  time compiler) which converts the byte code(0,1) into machine code-->
   
                                  ----------DATATYPES-------------
-<!--String, Number, Boolean, Bigint, Undefined, Null, Objects, Symbol-->
+<!--String, Number, Boolean, Bigint, Undefined, Null, Objects, Symbol, primitive datatypes can be converted to non-prim ds too/advanced ds-->
+<!-- string interpolation- uses the actual value, symbol keyword is used and gets assigned a unique value everytime its typedin regard to the resp
+variable, that;s the whole point of it, for generating a unique value
+objects- defining objs is done by key value pair
+to access an underlying property we use dots- username.firstname in it
+for array indexing-consider this and following-
+
+//Arrays
+let demos=["a","b",true]//diff ds are accepted in arrays
+//array indexing-
+console.log(demos[0,1]);//will return the value of the last operand incase of comma
+console.log(demos[0], demos[1]);//gives output normally for more than one values
+console.log([demos[0],demos[1]]);//gives output in array format 
+console.log(1+"1");// never rely on js implicit version as it considers that if one is string other might be too
+
+if i give input true, and in console if i show the output with number(xyz),it will show its output as 1,and 0 w false-->
+<!-- to create a hardcopy [...name of var], with the same name a new hardcopy can be created
+if to merge 2 arrays we create 2 and simply add them, then it gives us the output in a string format, for creating a 2d array as an output, we can use[x+y] x and y being 
+2 arrays, and to actually merge 2 arrays into one single array, we use x.concat(y), to see if some array includes a value we use x.includes("value") -->
