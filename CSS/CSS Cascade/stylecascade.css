@@ -1,6 +1,5 @@
-
-#outer-box{
-  background-color:purple;
+#outer-box {
+  background-color: purple;
 }
 
 .box {
@@ -8,8 +7,8 @@
   padding: 10px;
 }
 
-.inner-box{
-  background-color:red ;
+.inner-box {
+  background-color: red;
 }
 
 p {
@@ -18,6 +17,6 @@ p {
   padding: 0;
 }
 
-.white-text{
+.white-text {
   color: white;
 }

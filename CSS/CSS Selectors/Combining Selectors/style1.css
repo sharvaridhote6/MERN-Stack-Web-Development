@@ -5,23 +5,24 @@ space only- descandent(elmenet under something else, nested )
 no space- chaining(where all selectors are true)
 can use other conditions except for colors */
 
-h2, h3{
-    color: blueviolet;
+h2,
+h3 {
+  color: blueviolet;
 }
 /*child*/
-.box>p {
-    color: navy;
+.box > p {
+  color: navy;
 }
 /*descandent*/
-.box li{
-    color:red;
+.box li {
+  color: red;
 }
 /*chaining*/
-li.done{
-    color:green
+li.done {
+  color: green;
 }
 /*combining combiners*/
-ul p.done{
-    color:orange;
-    font-size: 4rem;
+ul p.done {
+  color: orange;
+  font-size: 4rem;
 }

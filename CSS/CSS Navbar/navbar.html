@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar creation</title>
     <style>
-         body{
-            font-family:Arial, Helvetica, sans-serif;
-            margin:0;
-            padding:0;
-            background-color: rgb(59, 57, 57);
-            color:white;
-            margin-left:10px;
-        } 
-        h2{
-            margin-bottom:10px; 
-        }
-        .nav1 ul{
-            display: flex;
-            justify-content: space-around;
-            background-color: white;
-            padding:20px;
-            list-style: none;
-            align-items: center;
-        }
-        /* .asd{
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(59, 57, 57);
+        color: white;
+        margin-left: 10px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      .nav1 ul {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        padding: 20px;
+        list-style: none;
+        align-items: center;
+      }
+      /* .asd{
             display: flex;
             background-color: white;
             list-style: none;
@@ -33,153 +33,148 @@
             justify-content: space-around;
             margin-left: 0px; }*/
 
-        .nav1 a{
-            text-decoration: none;
-            color:white;
-            border-radius: 10px;
-            padding:10px;
-            background-color:rgb(69, 64, 64);
-            padding: 5px 22px;
-            position:relative;
-        }
-        .nav1 .login-btn{
-            background-color: rgb(55, 61, 110);
-            color: white;
-            font-size:medium;
-            padding: 5px 15px;
+      .nav1 a {
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(69, 64, 64);
+        padding: 5px 22px;
+        position: relative;
+      }
+      .nav1 .login-btn {
+        background-color: rgb(55, 61, 110);
+        color: white;
+        font-size: medium;
+        padding: 5px 15px;
 
         .nav1 a::after {
-            content:"__";/*this gets stored after all nav1 a elements*/
-            position:absolute;
-            height:2px;
-            bottom:0;
-            left:0;
-            right:0;
-            background-color: black;
-            transform:scaleX(0);
-            transition:transform 0.3s
-            ease-in-out;
+          content: "__"; /*this gets stored after all nav1 a elements*/
+          position: absolute;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: black;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
         }
-        .nav1 a:hover::after{
-            transform: scaleX(1);
+        .nav1 a:hover::after {
+          transform: scaleX(1);
         }
         /* nav1 ul madhe child property is used and nav2 madhe we'll create a div differently and give a class to it to style */
-        
-        }
-        .nav2{
-          background-color: green;
-          width:200px;
-          height:200px;
-          padding:10px;
-        }
-        .nav2 ul{
-          list-style-type: none;
-          margin: 0;
-          text-align: left;
-        }
-        .nav2 ul li{
-          margin-bottom: 12px;
-          padding-top: 12px;
-        }
-        .nav2 ul li a{
-          display: block;
-          text-decoration: none;
-          color: white;
-          padding: 5px;
-           /*100percemt of the container*/
-        }
-        .nav2 ul li a:hover{
-          background-color: rgb(103, 196, 103);
-        }
-        .nav2 .login-btn{
-          background-color: rgb(7, 55, 7);
-          color: white;
-          padding: 10px 5px;
-          border-radius: 5px;
-          border: none;
-          width:100%;
-        }
-        .nav2 .login-btn:hover{
-          border: 1px solid white;
-        }
+      }
+      .nav2 {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+      }
+      .nav2 ul {
+        list-style-type: none;
+        margin: 0;
+        text-align: left;
+      }
+      .nav2 ul li {
+        margin-bottom: 12px;
+        padding-top: 12px;
+      }
+      .nav2 ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        /*100percemt of the container*/
+      }
+      .nav2 ul li a:hover {
+        background-color: rgb(103, 196, 103);
+      }
+      .nav2 .login-btn {
+        background-color: rgb(7, 55, 7);
+        color: white;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+      }
+      .nav2 .login-btn:hover {
+        border: 1px solid white;
+      }
 
-        .nav3{
-          background-color:rgb(55, 175, 202);
-          
-        }
-        .nav3 ul{
-          list-style:none;
-          display:flex;
-          justify-content: space-around;
-          padding:10px;
-          align-items:center;
-        }
-    
-        .nav3 ul li a{
-            text-decoration: none;
-            color: white;
-            padding:5px;
-            display: block;
-        }
-        /* in nav3 the dropdown-content class needs to be hovered from dropdown class */
-        .nav3 .dropdown:hover .dropdown-content{
-            display: block;
-            position:absolute;
-            background-color:rgb(55, 175, 202);
-            color: white;
-            width: 120px;
-        }
-        .nav3 .dropdown-content{
-          display: none;
-    
-        }
-/* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
+      .nav3 {
+        background-color: rgb(55, 175, 202);
+      }
+      .nav3 ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        align-items: center;
+      }
+
+      .nav3 ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        display: block;
+      }
+      /* in nav3 the dropdown-content class needs to be hovered from dropdown class */
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: rgb(55, 175, 202);
+        color: white;
+        width: 120px;
+      }
+      .nav3 .dropdown-content {
+        display: none;
+      }
+      /* now in order to hover a text, we need both after and hover after attributes, we'll keep the position as absolute which is that to its parent ,i.e, .nav1 a and specify 
 where exactly we want it to hover and the "content" gives us what to hover*/
-        
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="nav-container">
-        <h2>Variation 1: Horizontal with underline effect</h2>
-        <nav class="nav1">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><button class="login-btn">Login</button></li>
-          </ul>
-        </nav>
-      </div>
-  
-      <div class="nav-container">
-        <h2>Variation 2: Vertical with hover effect</h2>
-        <nav class="nav2">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-          </ul>
-          <button class="login-btn">Login</button>
-        </nav>
-      </div>
-  
-      <div class="nav-container">
-        <h2>Variation 3: Horizontal with dropdown</h2>
-        <nav class="nav3">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li class="dropdown">
-              <a href="#">About</a>
-              <div class="dropdown-content">
-                <a href="#">Our Story</a>
-                <a href="#">Team</a>
-                <a href="#">Contact</a>
-              </div>
-            </li>
-            <li><a href="#">Products</a></li>
-            <li><button class="login-btn">Login</button></li>
-          </ul>
-        </nav>
-      </div>
-</body>
+      <h2>Variation 1: Horizontal with underline effect</h2>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2: Vertical with hover effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 3: Horizontal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
 </html>

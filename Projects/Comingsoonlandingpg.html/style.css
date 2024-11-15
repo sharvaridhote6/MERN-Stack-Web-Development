@@ -1,63 +1,61 @@
-body{
-    padding: 0px;
-    margin:63px 50px;
-    font-family: monospace; 
-    font-size: larger;
-    height:100%;
-    background: linear-gradient(135deg, #8a2be2, #4169e1);
+body {
+  padding: 0px;
+  margin: 63px 50px;
+  font-family: monospace;
+  font-size: larger;
+  height: 100%;
+  background: linear-gradient(135deg, #8a2be2, #4169e1);
 }
-.container{
-    display:flex;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
 }
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding:50px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    background-color:  rgb(216, 202, 226);
-    border: none;
-    min-width: 200px;
-    max-height:500px;
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  background-color: rgb(216, 202, 226);
+  border: none;
+  min-width: 200px;
+  max-height: 500px;
 }
-.logo{
-    width:300px;
-    height:300px;
-    min-height:300px;
+.logo {
+  width: 300px;
+  height: 300px;
+  min-height: 300px;
 }
-h1{
-    margin-bottom: 0px;    
-    color: rgb(28, 9, 124);
+h1 {
+  margin-bottom: 0px;
+  color: rgb(28, 9, 124);
 }
-p{
-    color: rgb(45, 6, 128);
-    padding-bottom: 30px;
+p {
+  color: rgb(45, 6, 128);
+  padding-bottom: 30px;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-input[type="email"]{
-    padding: 7px;
-    border-radius: 5px;
-    border: none;
-
+input[type="email"] {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
 }
-button{
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    color: white;
-    background-color: #8337cb;
-    transition: background-color 0.5s
-    ease-in-out;
-    /* box-shadow: ; */
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  color: white;
+  background-color: #8337cb;
+  transition: background-color 0.5s ease-in-out;
+  /* box-shadow: ; */
 }
-.container .content button:hover{
-    background-color: #4a146e;
+.container .content button:hover {
+  background-color: #4a146e;
 }

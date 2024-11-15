@@ -5,30 +5,27 @@ ol {
 }
 
 /* Write your CSS below, don't change the rules above. */
-p{
-  color:red;
+p {
+  color: red;
 }
 
-
-.note{
-  font-size: 20px
+.note {
+  font-size: 20px;
 }
 
-
-#id-selector-demo{
+#id-selector-demo {
   color: green;
 }
-
 
 /* li value can be set to 2 types here as follows: */
 li[value] {
   color: blue; /*this will colour all the statements in attribute set to value*/
-} 
+}
 /* OR */
-li[value="4"]{
+li[value="4"] {
   color: blue;
 }
 
-*{
-  text-align:center
+* {
+  text-align: center;
 }

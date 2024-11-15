@@ -1,50 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>CSS Flag Project</title>
-  <style>
-    /* Write your CSS Code here.
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Flag Project</title>
+    <style>
+      /* Write your CSS Code here.
     Firstly main div is written */
-    .flag {
-      width: 900px;
-      height: 600px;
-      background-color: #ce1126;
-      position: relative;
-    } 
-/* Then we move to the child div of its parent, i.e, main*/
-    .flag > div {
-      width:900px; /*equivalent to 100%*/
-      height:300px;
-      background-color:#002868;
-      position:absolute ;
-      top: 150px;
-    }
-/*Now we use descandent div to access 3rd div inside */    
-    .flag> div> div{
-      width: 200px;
-      height:200px;
-      background-color: white;
-      border-radius: 100px;
-      position:absolute ;
-      top :50px; 
-      left:350px; 
-    }
-    p{
-      margin:0;
-      padding: 0;
-      font-size: 5rem;
-      text-align: center;
-      color: white
-    }
-    .flag>div>div> p{
-      color: black
-    }
-  </style>
-</head>
+      .flag {
+        width: 900px;
+        height: 600px;
+        background-color: #ce1126;
+        position: relative;
+      }
+      /* Then we move to the child div of its parent, i.e, main*/
+      .flag > div {
+        width: 900px; /*equivalent to 100%*/
+        height: 300px;
+        background-color: #002868;
+        position: absolute;
+        top: 150px;
+      }
+      /*Now we use descandent div to access 3rd div inside */
+      .flag > div > div {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 100px;
+        position: absolute;
+        top: 50px;
+        left: 350px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+      }
+      .flag > div > div > p {
+        color: black;
+      }
+    </style>
+  </head>
 
-<!-- 
+  <!-- 
   IMPORTANT! Do not change any HTML
 Don't add any classes/ids/elements 
 Use what you know about combining selectors 
@@ -54,15 +53,14 @@ Hint 2: You can use CSS inspection to get the colors from
 https://appbrewery.github.io/flag-of-laos/
 -->
 
-<body>
-  <div class="flag">
-    <p>The Flag</p>
-    <div>
+  <body>
+    <div class="flag">
+      <p>The Flag</p>
       <div>
-        <p>of Laos</p>
+        <div>
+          <p>of Laos</p>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
