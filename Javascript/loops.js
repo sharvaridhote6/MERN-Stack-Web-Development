@@ -67,4 +67,67 @@ for(let m=0; m<cities.length;m++){
 console.log(cityList);
 
 
-//qs7- write a for loop that loops through the array 
+//qs7- write a for loop that loops through the given array and stops the loops when it finds chai, store all teasbefore chai in a new array named selectedTeas
+//to find each element we use- teatypes[n] (similarly in other cases)
+let selectedTeas=[];
+let teaTypes=["green tea","black tea","chai","oolong tea"];
+for (let n = 0; n < teaTypes.length; n++) {
+  if (teaTypes[n]=="chai") {
+    break; //stops the loop
+  }
+  selectedTeas.push(teaTypes[n]);
+}
+console.log(selectedTeas);
+
+
+//qs8- write for loop that loops through the array given and skips paris, stores other cities in visitedCities
+let cityNames=["london","newyork","paris","berlin"];
+let visitedCities=[];
+for (let s = 0; s < cityNames.length; s++) {
+  if (cityNames[s]=="paris" || cityNames[s]=="Paris") {
+    continue; //skips or passes that one element from the array
+  }
+  visitedCities.push(cityNames[s]);
+}
+console.log(visitedCities);
+
+
+//qs9-use "for-of" loop to iterate through array given and stop when number 4 is found, store numbers before 4 in array smallNumbers
+// let nos=`[1,2,3,4,5]` //inside the backticks, this is not an array it a plain text representation of an array
+let smallNumbers=[];
+let nos= [1,2,3,4,5];
+
+for (const num of nos) {
+  if (num=="4") {
+    break;
+  }
+  smallNumbers.push(num)
+}
+console.log(smallNumbers);
+
+
+//qs10- for of to iterate through array given and skip lipsticks, store other cosmetics in preferredcosmecs
+let consmetics=["eyeliner","kajal","lipstick","blush"]
+let preferredcosmecs=[]
+for (const makeup of consmetics) {
+  if (makeup=="lipstick") {
+    continue;
+  }
+  preferredcosmecs.push(makeup);
+}
+console.log(preferredcosmecs);
+
+
+//qs11- forin loop to iterate thru an object containing city populations, stop loop when the peopulation of "berlin" is found and store all previpus cities popln ina  new object named "cityPopulations"
+// given object, with key and a value 
+let cityPopulations={
+  "london":890000,
+  "nyc":840000,
+  "paris": 220000,
+  "berlin":350000,
+}
+let citiesPopulations={};
+
+//console.log(Object.keys(cityPopulations));// syntax to return the keys
+//console.log(Object.values(cityPopulations));// syntax to return the values
+
