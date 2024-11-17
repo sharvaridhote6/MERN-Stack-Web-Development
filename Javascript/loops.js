@@ -122,12 +122,101 @@ console.log(preferredcosmecs);
 // given object, with key and a value 
 let cityPopulations={
   "london":890000,
+  berlin:350000,
   "nyc":840000,
-  "paris": 220000,
-  "berlin":350000,
+  paris: 220000,
 }
 let citiesPopulations={};
 
 //console.log(Object.keys(cityPopulations));// syntax to return the keys
 //console.log(Object.values(cityPopulations));// syntax to return the values
+// for(const city in cityPopulations ){
+//   //key value
+//   citiesPopulations[city]=cityPopulations[city];
+// }
+// console.log(citiesPopulations);
 
+//to check for a condition acc to qs
+for (const city in cityPopulations){
+  if (city=="berlin") {
+    break;
+  }
+  citiesPopulations[city]=cityPopulations[city];
+}
+console.log(citiesPopulations);
+
+
+//qs12-forin thru obj containing city populations skip any city w popln below 3 mil and store rest in a new obj named largeCities
+let worldCities={
+  "sydney":5000000,
+  tokyo:9000000,
+  berlin: 3500000,
+  "paris":2200000
+};
+let largeCities={};
+for(const bigCity in worldCities){
+  if (worldCities[bigCity]<3000000) {
+    continue;
+  }
+  largeCities[bigCity]=worldCities[bigCity];
+}
+console.log(largeCities);
+
+
+//qs13- for each loop- iteraties thru array given and stops the loops when chai is found and stores all previous teas in newTeas
+let newTeas=[]
+let teas=["earl grey","green tea","chai","oolong tea"]
+teas.forEach(function(tea) {  //here tea is used ofr every iteration, every time while iterating this tea will be assigned to every element in the array
+  if (tea=="chai") {
+    return; //skips that element
+  }
+  newTeas.push(tea);
+});
+console.log(newTeas);
+
+
+//qs14- foreach iterating through array given, skip sydney and store other cities in array travelCities
+let places=["berlin","tokyo","sydney","paris"]
+let travelCities=[]
+places.forEach(function(place) {
+  if(place=="sydney"){
+    return;
+  }
+  travelCities.push(place);
+});
+console.log(travelCities);
+
+//OR
+
+places.forEach((place) => {
+  if (place=="sydney") {
+    return;
+  }
+  travelCities.push(place)
+});
+console.log(travelCities);
+
+
+//qs15- write for loop iterating through array given, skip alue 7 and multiply rest by 2, store results in new array "doubledNumbers"
+let number=[2,5,7,9]
+let doubledNumbers=[]
+for (let a = 0; a < number.length; a++) {
+  if (number[a]=="7") {
+    continue;
+  }
+  doubledNumbers.push(number[a]*2);
+}
+console.log(doubledNumbers);
+
+
+
+//qs16- forof loop iterating through array given, stop when length of current tea name is >10, store teas in shortTeas
+let teaNames=["green tea","black tea","jasmine tea","lemon tea"]
+let shortTeas=[]
+for (const Tea of teaNames) { //here we have to find the length of each string, so using "Tea" for every element and determining its length we can get the job done
+  if (Tea.length>10) {
+    break;
+  }
+  shortTeas.push(Tea);
+}
+console.log(shortTeas);

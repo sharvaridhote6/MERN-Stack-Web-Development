@@ -28,12 +28,62 @@ console.log(1+"1");// never rely on js implicit version as it considers that if 
 if i give input true, and in console if i show the output with number(xyz),it will show its output as 1,and 0 w false-->
 <!-- to create a hardcopy [...name of var], with the same name a new hardcopy can be created
 if to merge 2 arrays we create 2 and simply add them, then it gives us the output in a string format, for creating a 2d array as an output, we can use[x+y] x and y being 
-2 arrays, and to actually merge 2 arrays into one single array, we use x.concat(y), to see if some array includes a value we use x.includes("value") 
+2 arrays, and to actually merge 2 arrays into one single array, we use x.concat(y), to see if some array includes a value we use x.includes("value") -->
 
-functions and this keyword- placeholder is a parameter, and "" is and argument passed in the greet function
+                                  -----------------Functions---------------
+<!-- functions and this keyword- placeholder is a parameter, and "" is and argument passed in the greet function 
 we dont use string="" when passing a parameter a placeholder because it directly goes into strings and this parameter can be anything- strings, values objects arrays etc
-(it is a placeholder that's why its a parameter), xyz()- is an execution, xyz- is a fucntion
+(it is a placeholder that's why its a parameter), xyz()- is an execution, xyz- is a fucntion reference
 loops- while checks the conditions first then executes the statements and do while does the conditions first then checks the condition at the end
 for,for/in, for/of, forEach- are available in js, push method()-Appends new elements to the end of an array, and returns the new length of the array
 for(init number,condition, inc/dec)
 shift and unshift in js-shift() removes the first element from an array and returns it, while unshift() adds one or more elements to the beginning of an array and returns the new length. -->
+
+                                     ----------------FOR loop types-----------------
+<!-- for of- The for...of statement executes a loop that operates on a sequence of values
+break- used for stopping the elements till the conditioned element, continue- skips the element at the conditioned element, an object is given by let/const var={}, inside of brackets 
+we'll have "key":value, pairs, to pass on all the keys this console.log can be used for objects- console.log(Object.keys(var)); 
+
+forin- indexing is based on keys, there is no push method in this, we have to create a key and its value, following shows how its syntax is used-
+for(const (key) in (object)){           //where key- create new, obj- array w stored values(say x, and y where new values will be stored)
+    //key value
+    y array[key]=x array[key];
+    }                 
+console.log(y array);
+
+forEach-  array.forEach(element => {});  //here array is the one w stored values and element is the one you want to access the data w so create a new one(like keys)
+The forEach() method of Array instances executes a provided function once for each array element., here forEach() is a function, like for eg say function hello(), hello becomes a fucntion
+function meaning functionality that wil run on each element in the array, we cannot use break or continue inside this function scope since it doesnt work for fucns it works for loops, we instead
+use return to skip an element. we can either use functions or arrow element for this
+
+forin- no push method
+foreach- no break/continue, only return
+
+length of a string(word/element) can be calculated by myString() function
+
+returning and accepting a function is called- first-class function/higher order function-A programming language is said to have First-class functions when functions in that language are treated 
+like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable,
+basically anything that takes a function or returns a function bcak in a funcn
+
+
+important- Object.freeze() is used to freeze all objects so it cannot be changed further in the code, 
+
+When a function is defined inside another function, it forms a closure. The inner function has access to: 1. Its own scope (variables defined within it).
+2. The outer function's scope (variables and functions defined in the outer function).
+3. Global scope (variables defined outside any function). --> 
+
+                 -----------------OOPS----------------
+<!-- js is basically prototype based language which is covered in obj-oriented based lang using keywords like classes, obj, constructors etc, it supports everything which oop has to support but bts is prototype based, everything is an object here
+prototype- extra functionaltites and properties in any given data type, its basically a medium through which an object can access its properties
+class- blueprint for creating objects/instances, defines cinstructors
+ objects/instances- instance is an object created from class or constructor 
+ constructor- special function used to create/initialize an object, we use constructors to create instnaces or a type
+dunder prototypes- 2 underscores(x)2 underscores, its can be used to access 2 prtotypes of diff objs
+backticks- A template literal is a way to define a string that allows embedding expressions within the string using ${}.they are used most commonly for string interpolation
+(to create strings by doing substitution of placeholders). sayfor eg- i want the output of num1+num2 as a result but the values might change, yet i dont want ti change the console then-
+console.log(`addition of ${num1} and ${num2} will be the ${result}`) [where result is- num1+num2], even while using backticks if i write `my name is
+Sharvari Dhote`, it will take SD on another line exactly like how you wrote it
+
+setOwnProperty-used unstead of dunder proto, meaning is used for setting a prototype
+getOwnProprty-used to get acess to another function's properties 
+hasOwnproperty-returns a boolean indicating whether object has specified property as its own property-->
