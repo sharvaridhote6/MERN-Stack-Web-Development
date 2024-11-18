@@ -1,10 +1,36 @@
+
+                     ---------------------BASICS------------------
 <!-- JS is an object oriented- language, to run a file manually, mention its path name properly first, for example "node Jsfoundation\hello.js" 
 is a cmd to run hello.js file in Jsfoundation folder , for printing something, output, console.log is only used, semicolon is not really needed 
 but its a good pratice to have. Through keywords like let, const, var variables are assigned, esp in the case of const, we cannot change the value 
 to something else by overriding it
 
 console.log only prints what we type in the console it doesnt return us anything or give us anything back ,to s=do it we can use keyword return
-where the function will get returned and closed on that line-->
+where the function will get returned and closed on that line
+
+variables-attributes which are specific to an instance of a class,A variable is a container for storing data or values. 
+instance- an object within a class or constructor
+functions- it is a method or a statement or a task/ block of code which performs some sort of on operation or action or has a particular behaviour in the code
+You can store functions in variables., Functions can be passed as arguments to other functions(called as callback fucntions, and they allow  dynamic 
+behavior, enabling reuse and modular code).,Functions can be returned from other functions., Functions can be assigned as properties of objects or classes. 
+objects- a key value paired collection to store values(whatver data)and methods (function which operate on the data)
+const person = {          // `person` is a variable that holds an object
+    name: "Alice",        // `name` is a property with a string value
+    age: 25,              // `age` is a property with a number value                         //name:alice, age:25, isstudent:true are objects
+    isStudent: true,      // `isStudent` is a property with a boolean value
+    greet: function() {   // `greet` is a property that holds a function (a method)
+        console.log("Hello!");
+    }
+};
+we define objects as= const/let={xyz}
+argument -array like local variable used inside the functions that gives us an access to the parameters,we can access multiple args as well passed to a funcn using indexes-
+  function hello() { 
+        console.log(arguments[0]); 
+    } 
+    hello("GFG");           here arg[0] is passed since there is only one arg in hello funcn
+
+-->
+
                                  ---------------HOW DOES A FILE WORK?--------------
 <!-- when a code file is saved, parsing/tokenisation is done which means some keywords like console and log are identified and creates a syntax 
 tree, after this we get the JIT just in  time compiler) which converts the byte code(0,1) into machine code-->
@@ -71,13 +97,13 @@ important- Object.freeze() is used to freeze all objects so it cannot be changed
 When a function is defined inside another function, it forms a closure. The inner function has access to: 1. Its own scope (variables defined within it).
 2. The outer function's scope (variables and functions defined in the outer function).
 3. Global scope (variables defined outside any function). --> 
-
-                 -----------------OOPS----------------
+                   
+                 
+                              ----------------PROTOTYPES--------------
 <!-- js is basically prototype based language which is covered in obj-oriented based lang using keywords like classes, obj, constructors etc, it supports everything which oop has to support but bts is prototype based, everything is an object here
 prototype- extra functionaltites and properties in any given data type, its basically a medium through which an object can access its properties
 class- blueprint for creating objects/instances, defines cinstructors
- objects/instances- instance is an object created from class or constructor 
- constructor- special function used to create/initialize an object, we use constructors to create instnaces or a type
+objects/instances- instance is an object created from class or constructor 
 dunder prototypes- 2 underscores(x)2 underscores, its can be used to access 2 prtotypes of diff objs
 backticks- A template literal is a way to define a string that allows embedding expressions within the string using ${}.they are used most commonly for string interpolation
 (to create strings by doing substitution of placeholders). sayfor eg- i want the output of num1+num2 as a result but the values might change, yet i dont want ti change the console then-
@@ -87,3 +113,14 @@ Sharvari Dhote`, it will take SD on another line exactly like how you wrote it
 setOwnProperty-used unstead of dunder proto, meaning is used for setting a prototype
 getOwnProprty-used to get acess to another function's properties 
 hasOwnproperty-returns a boolean indicating whether object has specified property as its own property-->
+
+                               ------------CONSTRUCTORS-----------
+<!-- constructor- special function of class used to create/initialize an object, we use constructors to create instnaces or a type 
+IN classes- the placeholders can be a variable and a function as well in js, we can store functions in a var in this
+a constructor creates objects that share the same properties and methods, and they do not have a return statement as it returns the new object automatically
+This-this keyword refers to the object being created when a function is called,
+New-new is used to create a new instance of the object, new keyword is used to invoke this function and return the properties and functions which are stored inside the const using this, js automatically created a new object and assigns it to this keyw, a new object is created and "this" gets bound to
+that object and the properties and funcs assigned to this becaomes the part of the new object, If the constructor doesn't explicitly return an object, the newly created object is returned by default.
+-->                        
+                                    -----------------OOPS----------------
+<!--  -->
