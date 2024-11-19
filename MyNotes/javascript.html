@@ -15,46 +15,46 @@ You can store functions in variables., Functions can be passed as arguments to o
 behavior, enabling reuse and modular code).,Functions can be returned from other functions., Functions can be assigned as properties of objects or classes. 
 objects- a key value paired collection to store values(whatver data)and methods (function which operate on the data)
 const person = {          // `person` is a variable that holds an object
-    name: "Alice",        // `name` is a property with a string value
-    age: 25,              // `age` is a property with a number value                         //name:alice, age:25, isstudent:true are objects
-    isStudent: true,      // `isStudent` is a property with a boolean value
-    greet: function() {   // `greet` is a property that holds a function (a method)
-        console.log("Hello!");
-    }
+name: "Alice",        // `name` is a property with a string value
+age: 25,              // `age` is a property with a number value                         //name:alice, age:25, isstudent:true are objects
+isStudent: true,      // `isStudent` is a property with a boolean value
+greet: function() {   // `greet` is a property that holds a function (a method)
+console.log("Hello!");
+}
 };
 we define objects as= const/let={xyz}
 argument -array like local variable used inside the functions that gives us an access to the parameters,we can access multiple args as well passed to a funcn using indexes-
-  function hello() { 
-        console.log(arguments[0]); 
+function hello() { 
+    console.log(arguments[0]); 
     } 
     hello("GFG");           here arg[0] is passed since there is only one arg in hello funcn
-
--->
-
-                                 ---------------HOW DOES A FILE WORK?--------------
-<!-- when a code file is saved, parsing/tokenisation is done which means some keywords like console and log are identified and creates a syntax 
-tree, after this we get the JIT just in  time compiler) which converts the byte code(0,1) into machine code-->
-  
-                                 ----------DATATYPES-------------
-<!--String, Number, Boolean, Bigint, Undefined, Null, Objects, Symbol, primitive datatypes can be converted to non-prim ds too/advanced ds-->
-<!-- string interpolation- uses the actual value, symbol keyword is used and gets assigned a unique value everytime its typedin regard to the resp
-variable, that;s the whole point of it, for generating a unique value
-objects- defining objs is done by key value pair
-to access an underlying property we use dots- username.firstname in it
-for array indexing-consider this and following-
-
-//Arrays
-let demos=["a","b",true]//diff ds are accepted in arrays
-//array indexing-
-console.log(demos[0,1]);//will return the value of the last operand incase of comma
-console.log(demos[0], demos[1]);//gives output normally for more than one values
-console.log([demos[0],demos[1]]);//gives output in array format 
-console.log(1+"1");// never rely on js implicit version as it considers that if one is string other might be too
-
-if i give input true, and in console if i show the output with number(xyz),it will show its output as 1,and 0 w false-->
-<!-- to create a hardcopy [...name of var], with the same name a new hardcopy can be created
-if to merge 2 arrays we create 2 and simply add them, then it gives us the output in a string format, for creating a 2d array as an output, we can use[x+y] x and y being 
-2 arrays, and to actually merge 2 arrays into one single array, we use x.concat(y), to see if some array includes a value we use x.includes("value") -->
+    
+    -->
+    
+    ---------------HOW DOES A FILE WORK?--------------
+    <!-- when a code file is saved, parsing/tokenisation is done which means some keywords like console and log are identified and creates a syntax 
+    tree, after this we get the JIT just in  time compiler) which converts the byte code(0,1) into machine code-->
+    
+    ----------DATATYPES-------------
+    <!--String, Number, Boolean, Bigint, Undefined, Null, Objects, Symbol, primitive datatypes can be converted to non-prim ds too/advanced ds-->
+    <!-- string interpolation- uses the actual value, symbol keyword is used and gets assigned a unique value everytime its typedin regard to the resp
+    variable, that;s the whole point of it, for generating a unique value
+    objects- defining objs is done by key value pair
+    to access an underlying property we use dots- username.firstname in it
+    for array indexing-consider this and following-
+    
+    //Arrays
+    let demos=["a","b",true]//diff ds are accepted in arrays
+    //array indexing-
+    console.log(demos[0,1]);//will return the value of the last operand incase of comma
+    console.log(demos[0], demos[1]);//gives output normally for more than one values
+    console.log([demos[0],demos[1]]);//gives output in array format 
+    console.log(1+"1");// never rely on js implicit version as it considers that if one is string other might be too
+    
+    if i give input true, and in console if i show the output with number(xyz),it will show its output as 1,and 0 w false-->
+    <!-- to create a hardcopy [...name of var], with the same name a new hardcopy can be created
+    if to merge 2 arrays we create 2 and simply add them, then it gives us the output in a string format, for creating a 2d array as an output, we can use[x+y] x and y being 
+    2 arrays, and to actually merge 2 arrays into one single array, we use x.concat(y), to see if some array includes a value we use x.includes("value") -->
 
                                   -----------------Functions---------------
 <!-- functions and this keyword- placeholder is a parameter, and "" is and argument passed in the greet function 
@@ -65,16 +65,16 @@ for,for/in, for/of, forEach- are available in js, push method()-Appends new elem
 for(init number,condition, inc/dec)
 shift and unshift in js-shift() removes the first element from an array and returns it, while unshift() adds one or more elements to the beginning of an array and returns the new length. -->
 
-                                     ----------------FOR loop types-----------------
+----------------FOR loop types-----------------
 <!-- for of- The for...of statement executes a loop that operates on a sequence of values
 break- used for stopping the elements till the conditioned element, continue- skips the element at the conditioned element, an object is given by let/const var={}, inside of brackets 
 we'll have "key":value, pairs, to pass on all the keys this console.log can be used for objects- console.log(Object.keys(var)); 
 
 forin- indexing is based on keys, there is no push method in this, we have to create a key and its value, following shows how its syntax is used-
 for(const (key) in (object)){           //where key- create new, obj- array w stored values(say x, and y where new values will be stored)
-    //key value
-    y array[key]=x array[key];
-    }                 
+//key value
+y array[key]=x array[key];
+}                 
 console.log(y array);
 
 forEach-  array.forEach(element => {});  //here array is the one w stored values and element is the one you want to access the data w so create a new one(like keys)
@@ -97,12 +97,11 @@ important- Object.freeze() is used to freeze all objects so it cannot be changed
 When a function is defined inside another function, it forms a closure. The inner function has access to: 1. Its own scope (variables defined within it).
 2. The outer function's scope (variables and functions defined in the outer function).
 3. Global scope (variables defined outside any function). --> 
-                   
-                 
-                              ----------------PROTOTYPES--------------
+
+
+----------------PROTOTYPES--------------
 <!-- js is basically prototype based language which is covered in obj-oriented based lang using keywords like classes, obj, constructors etc, it supports everything which oop has to support but bts is prototype based, everything is an object here
 prototype- extra functionaltites and properties in any given data type, its basically a medium through which an object can access its properties
-class- blueprint for creating objects/instances, defines cinstructors
 objects/instances- instance is an object created from class or constructor 
 dunder prototypes- 2 underscores(x)2 underscores, its can be used to access 2 prtotypes of diff objs
 backticks- A template literal is a way to define a string that allows embedding expressions within the string using ${}.they are used most commonly for string interpolation
@@ -114,13 +113,42 @@ setOwnProperty-used unstead of dunder proto, meaning is used for setting a proto
 getOwnProprty-used to get acess to another function's properties 
 hasOwnproperty-returns a boolean indicating whether object has specified property as its own property-->
 
-                               ------------CONSTRUCTORS-----------
+------------CONSTRUCTORS AND OOPS-----------
 <!-- constructor- special function of class used to create/initialize an object, we use constructors to create instnaces or a type 
 IN classes- the placeholders can be a variable and a function as well in js, we can store functions in a var in this
 a constructor creates objects that share the same properties and methods, and they do not have a return statement as it returns the new object automatically
 This-this keyword refers to the object being created when a function is called,
-New-new is used to create a new instance of the object, new keyword is used to invoke this function and return the properties and functions which are stored inside the const using this, js automatically created a new object and assigns it to this keyw, a new object is created and "this" gets bound to
-that object and the properties and funcs assigned to this becaomes the part of the new object, If the constructor doesn't explicitly return an object, the newly created object is returned by default.
--->                        
-                                    -----------------OOPS----------------
-<!--  -->
+New-new is used to create a new instance of the object, new keyword is used to invoke this function and return the properties and functions which are stored inside the const using this, js automatically created a new object and assigns it to this keyw, 
+a new object is created and "this" gets bound to that object and the properties and funcs assigned to this becaomes the part of the new object, If the constructor doesn't explicitly return an object, the newly created object is returned by default.-->
+ 
+
+                                     ----------------INHERITANCE-------------
+<!-- class- all the functions in classes are called methods, blueprint/template for creating objects/instances, defines constructors, if for eg i want to make 50 cars, its blueprint of creating them will be defined as a class
+inheritance-passing down properties and methods from parent class to child class, we use the word extends for this, which allows us to access anything from above class,  
+eg- class Parent{
+}
+class Child extends Parent{
+}
+derived class is generally a type of the parent class while writing actual egs, and putting a constructor in the derived class is an optional thing
+syntax to create objects from classes- let myObj= new nameofclass()
+eg- class abc{
+    constructor(properties){
+    this.prop1=prop1
+    }
+    method1(){
+    return`${this.prop1}`; OR
+    console.log(method1)
+    }
+}
+    let myObj= new abc(); //calling the object, if i dont pass params here, it will show undefined in returning the statement
+    console.log(myObj.method1)
+
+method overriding :if there is a same name method in parent and child class, then it will consider and invoke child class' method,eg- myObj.abc() when abc is present in 
+both parent + child, then it will invoke child's method
+
+super keyw- used to call constructor or parent class to access the parent's props and methods by child, when we make a constructor in child class, its necessary for child
+class to use super keyw and call the constrcutor which is present in parent class first
+  --> 
+
+                                          ---------------------ENCAPSULATION---------------------
+<!-- encap- restricts the direct access to object data -->

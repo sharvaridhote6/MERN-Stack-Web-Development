@@ -80,4 +80,11 @@ let car={
 console.log(car.start());
 
 
-//eg
+//eg5-
+function Persons(name, age){
+    this.name=name
+    this.age=age
+}
+let Diya=new Persons("Diya", 20)
+console.log(Diya.age, Diya.name);
+
