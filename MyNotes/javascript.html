@@ -8,8 +8,11 @@ to something else by overriding it
 console.log only prints what we type in the console it doesnt return us anything or give us anything back ,to s=do it we can use keyword return
 where the function will get returned and closed on that line
 
+
+void keyword- The void keyword in JavaScript, is used to evaluate an expression which does not return any value,by using it, we can prevent the browser 
+from displaying the result of the execution of the expression.
 variables-attributes which are specific to an instance of a class,A variable is a container for storing data or values. 
-instance- an object within a class or constructor
+instance/objects in OOPs- an object within a class or constructor, entities of real world
 functions- it is a method or a statement or a task/ block of code which performs some sort of on operation or action or has a particular behaviour in the code
 You can store functions in variables., Functions can be passed as arguments to other functions(called as callback fucntions, and they allow  dynamic 
 behavior, enabling reuse and modular code).,Functions can be returned from other functions., Functions can be assigned as properties of objects or classes. 
@@ -114,7 +117,10 @@ getOwnProprty-used to get acess to another function's properties
 hasOwnproperty-returns a boolean indicating whether object has specified property as its own property-->
 
 ------------CONSTRUCTORS AND OOPS-----------
-<!-- constructor- special function of class used to create/initialize an object, we use constructors to create instnaces or a type 
+<!-- constructor- special function of class used to create/initialize an object, we use constructors to create instnaces or a type, and is automatically invoked when an OBJECT IS CREATED, that too only once, and should awlays be assigned inside public class
+types of constr- non parameterized, parameterized and copy, NP does not contain any params
+
+eg-(apna college )
 IN classes- the placeholders can be a variable and a function as well in js, we can store functions in a var in this
 a constructor creates objects that share the same properties and methods, and they do not have a return statement as it returns the new object automatically
 This-this keyword refers to the object being created when a function is called,
@@ -123,7 +129,8 @@ a new object is created and "this" gets bound to that object and the properties 
  
 
                                      ----------------INHERITANCE-------------
-<!-- class- all the functions in classes are called methods, blueprint/template for creating objects/instances, defines constructors, if for eg i want to make 50 cars, its blueprint of creating them will be defined as a class
+<!-- class- all the functions in classes are called methods, blueprint/template for creating objects/instances, defines constructors, if for eg i want to make 50 cars, its blueprint of creating them will be defined as a class, it is used to not write same code 
+just by changing its values for a lot of people's/things data and to not be a prey to bad programming 
 inheritance-passing down properties and methods from parent class to child class, we use the word extends for this, which allows us to access anything from above class,  
 eg- class Parent{
 }
@@ -134,7 +141,7 @@ syntax to create objects from classes- let myObj= new nameofclass()
 eg- class abc{
     constructor(properties){
     this.prop1=prop1
-    }
+    } 
     method1(){
     return`${this.prop1}`; OR
     console.log(method1)
@@ -151,4 +158,5 @@ class to use super keyw and call the constrcutor which is present in parent clas
   --> 
 
                                           ---------------------ENCAPSULATION---------------------
-<!-- encap- restricts the direct access to object data -->
+<!-- encap- restricts the direct access to object data, basically packing of data and functions into one component and controlling access to it to make a blckbox out of that object, due to this user of that class only knows its interface and
+not the hidden implementation, you don't completely want to hide it but be able to access it with some restrictions  -->

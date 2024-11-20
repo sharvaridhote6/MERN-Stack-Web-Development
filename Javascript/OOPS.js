@@ -80,6 +80,14 @@ console.log(human.eat);
 
 
 //ENCAPSULATION
-class bankaccout{
-    
+class Bankaccout{
+    #balance= 0; //hash means it wont be able to access by anyone outside this class, only inside though
+
+    deposit(amount){
+        this.#balance +=amount //balance= balance+amount
+        return this.#balance;
+    }
+    getBalance(){
+        return `${this.#balance}`
+    }
 }
