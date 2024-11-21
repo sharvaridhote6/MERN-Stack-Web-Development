@@ -91,3 +91,9 @@ class Bankaccout{
         return `${this.#balance}`
     }
 }
+let account = new Bankaccout();
+console.log(account.getBalance());
+
+
+
+//Abstraction
