@@ -1,0 +1,75 @@
+<!-- version control system- 
+sometimes softwares work somethimes they dont, this leads us to trace back to the checkpoints to see where the code was working fine, this 
+is called version control  -->
+commands/ to create and push a repo from terminal- <!--
+mkdir xys creates xyz folder, 
+ls- shows the existing folders, if no folders then no output
+git --version shows the version
+cd xyz- takes us to that folder/initislaises it
+git status- shows status of git folder
+cd .. - used to get back one folder or out of directory 
+ls -Force -shows all the hidden files-->
+Touch- will not work because it is a unix cmd not recognised by the powershell
+<!-- New-Item xyz.txt- creates a new file in the folder
+    Set-Content xyz.txt to create or overwrite an empty file.--> 
+creates folder + file and shows them, now reay to add to staging area, then track it and commit it w a msg, then push 
+staging area is like in intermediate zone before we commit, we can go ahead and stage and also go behind and unstage from here <!-- 
+git add. -add all files to staging area/ git add xyz abc- only 2 specified files
+commit -m "add file"- -m is used for adding a message
+ git log- shows
+commit d58264701a75a2f2bd65a21d84958af0f6c74e8d (HEAD -> master)
+Author: Sharvari Dhote <dhotesharvari6@gmail.com>
+Date:   Mon Dec 23 12:41:45 2024 +0530
+
+git log --oneline(gives log of the information and shows in oneline)
+d582647 (HEAD -> master) commit this file
+
+git config --global user.name/email- sets the global username for Git commits and returns the name and email,and this setting will be 
+used on all repositories on your machine, and it shows the name and email associated with the account
+git config --global core.editor "code --wait"- sets the default text editor as visual studio code, --wait flag tells us to wait till we 
+finish editing the file, meaning when we have to edit something git will open vscode and wait untill we save and exit the editor
+
+git branch abc- creates a new branch
+
+git ignore- read by git itself and we have to create it
+
+pwd- gives the home directory of the entire computer(Path -C:\Users\sharv\gitone )
+
+git --config --global --list -is a global file and gives the overall info
+
+git branch- there is a master branch, which has all nodes on which commits have been made, thsi shows the current branch which we are on 
+
+git checkout/switch abc- checksout from current branch and changes from master to abc
+in vsc in gitone this is shown in gitone/.git/log/ref/nav-bar
+git checkout -b abc/git switch -c abc- creates a new branch named "abc" and will move the current pointer to that created branch
+
+merging branches- to merge branches, first we have to verify that all the commits have been made after staging, only then we can merge 
+git merge abc- opens vsc w current window which you're working on and gives a message of merging the branches, then we can save it and close the
+file because code --wait will wait till we close the file completely after editing, then the merging will show in the terminal  
+-->
+
+
+eg-
+<!-- PS C:\Users\sharv\gitone> git branch ->cmd given 
+* master ->points to the master branch
+PS C:\Users\sharv\gitone> git branch nav-bar ->cmd which adds another file in gitone/.git/head/nav-bar
+PS C:\Users\sharv\gitone> git checkout nav-bar
+A       .gitignore
+Switched to branch 'nav-bar'
+PS C:\Users\sharv\gitone> git branch (this shows that now the branch is pointing to the nav-bar )
+  master
+* nav-bar   
+--> 
+
+
+
+eg-
+<!--  cd/Users/sharv
+mkdir gitone
+ls (shows existing if not then no op)
+ls -Force (shows hidden files- .git)
+cd .git(takes us to .git file)
+ls(gives op)
+  -->
+
+
