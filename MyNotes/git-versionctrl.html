@@ -8,7 +8,12 @@ git --version shows the version
 cd xyz- takes us to that folder/initislaises it
 git status- shows status of git folder
 cd .. - used to get back one folder or out of directory 
-ls -Force -shows all the hidden files-->
+ls -Force -shows all the hidden files
+
+git rm --cached abc - used to untrack file from staging area and bring it back to not added version
+git reset --soft HEAD~1- used to undo the commit operation so the file goes back to the tracked/added version
+git reset --hard HEAD~1- used to completely delete the committed file from the repo/branch/folder  -->
+
 Touch- will not work because it is a unix cmd not recognised by the powershell
 <!-- New-Item xyz.txt- creates a new file in the folder
     Set-Content xyz.txt to create or overwrite an empty file.--> 
@@ -16,6 +21,7 @@ creates folder + file and shows them, now reay to add to staging area, then trac
 staging area is like in intermediate zone before we commit, we can go ahead and stage and also go behind and unstage from here <!-- 
 git add. -add all files to staging area/ git add xyz abc- only 2 specified files
 commit -m "add file"- -m is used for adding a message
+git commit -am "sffh" - used for adding and commiting at the same time
  git log- shows
 commit d58264701a75a2f2bd65a21d84958af0f6c74e8d (HEAD -> master)
 Author: Sharvari Dhote <dhotesharvari6@gmail.com>
@@ -29,24 +35,73 @@ used on all repositories on your machine, and it shows the name and email associ
 git config --global core.editor "code --wait"- sets the default text editor as visual studio code, --wait flag tells us to wait till we 
 finish editing the file, meaning when we have to edit something git will open vscode and wait untill we save and exit the editor
 
-git branch abc- creates a new branch
-
 git ignore- read by git itself and we have to create it
 
 pwd- gives the home directory of the entire computer(Path -C:\Users\sharv\gitone )
 
 git --config --global --list -is a global file and gives the overall info
 
+branches are used as checkpoints, when we have to fix a bug or add a new pointer to the features, it acts as a pointer to the snapshot of chnages
 git branch- there is a master branch, which has all nodes on which commits have been made, thsi shows the current branch which we are on 
+git branch abc- creates a new branch 
 
 git checkout/switch abc- checksout from current branch and changes from master to abc
 in vsc in gitone this is shown in gitone/.git/log/ref/nav-bar
 git checkout -b abc/git switch -c abc- creates a new branch named "abc" and will move the current pointer to that created branch
 
 merging branches- to merge branches, first we have to verify that all the commits have been made after staging, only then we can merge 
-git merge abc- opens vsc w current window which you're working on and gives a message of merging the branches, then we can save it and close the
-file because code --wait will wait till we close the file completely after editing, then the merging will show in the terminal  
--->
+git merge abc- opens vsc w current window which you're working on and gives a message of merging the branches, then we can save it and close 
+the file because code --wait will wait till we close the file completely after editing, then the merging will show in the terminal  
+git branch --merge used to see a list of all merged branches
+
+git branch -d nav-bar - deletes branch nav-bar(used to del branch)
+git rm abc- deletes a file created by New-Item abc in a specific branch
+
+rename a file- git mv abc xyz(abc file is reanmed as xyz) this can happen only when the file is in working directory, hence it is always a good 
+idea to switch branches to the one you want
+to work in.
+
+git only tracks the files in the current pointing branch, hence if the branch is pointing to master, it wont show footer.html/foot.html which
+are created until they are tracked or added by git, hence they will disappear either until tracked or until pointed to footer branch
+
+git diff- shows the difference between the same files at different times, like maybe before/after staged, before/after commits etc, when the 
+same file was operated on, on 2 diff timelines
+---/+++ these are used to show the same file for before/after of an operation, before commiting lets say and after commiting, not for adding
+or removing those files
+a file is the one before operating and b is after operating- hence ---a/+++b files are present
+
+git stash- takes away uncommitted changes (both tracked and untracked) and saves them for later use, this isn't limited to a branch and we can
+stash one branch and pop those changes in other branch and can see the stashed changed in other branch as well
+git stash pop- Removes a single stashed state from the stash list and apply it on top of the current working tree state, 
+eg-
+ git diff index.html
+PS C:\Users\sharv\gitone> git diff --staged (used to show the staged changes)
+diff --git a/foot.html b/foot.html(foot because ut was foot before then changed to index)
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..5033aef
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,3 @@
++<head>
++
++</head>
+\ No newline at end of file
+
+we cannot switch a branch if we haven't commited the curreny work yet, if there are any files in staging area then we have to first commit 
+all the reuired changes and only then can we  move tp a diff branch
+
+git diff --summary HEAD (this cmd is used for showing the summary of changes comapred to the last commit by HEAD )
+ delete mode 100644 foot.html( file is renamed as index hence foot gets deletes)
+ create mode 100644 index.html
+
+git stash- create a repo, work on it then commit it, after that switch to a new branch and work there
+
+git rebase- command used for merging and cleaning up all commits, it should never be run on a master/main branch, always do on a side branch
+
+ -->
 
 
 eg-
