@@ -5,7 +5,7 @@ is a cmd to run hello.js file in Jsfoundation folder , for printing something, o
 but its a good pratice to have. Through keywords like let, const, var variables are assigned, esp in the case of const, we cannot change the value 
 to something else by overriding it
 
-console.log only prints what we type in the console it doesnt return us anything or give us anything back ,to s=do it we can use keyword return
+console.log only prints what we type in the console it doesnt return us anything or give us anything back ,to do it we can use keyword return
 where the function will get returned and closed on that line
 
 
@@ -167,3 +167,20 @@ to set and get the values of variables.  -->
 <!--Abstraction hides the complex and implementation detail, dont wanna know bts just need the messgage or data which user is asking for, it helps in code duplication, increases reusability, helps user avoid writing ll code,
 change internal implementation bts w/o affecting the user, helps in increasing security, unlike data hiding(encap) it not only hides bts but also shows imp part, they cannot be instantiated, meaning cannot make objects, they're meant to be inherited.
 and used to define derived classes typically and -->
+
+
+                            -------------DOM BOM----------------------<!--
+WE have an object window- inside that we have 3 things- DOM, BOM, javascript
+generally in javascript everything comes under a window object, and window is a global object and basically provides a way to control the whole page and elements in it by 
+specifically mentioning those, all the dom and bom code lines go in script.js file and the content will go in index.html file 
+
+dom-(dhacha/elements) document object model- basically the whole page is considered as a javascript object and named as document ,this consists of elements meaning head, body, h1, etc ie elements of a code like tags and buttons
+
+bom-(working inside dhacha) browser object model-these are the additional objects provided by the host environment for working w everything else except the document, for eg redirecting to another url , connecting 2 pages togtehr thru urls ,or giving alerts on pages
+whats the screen size height width etc, navigator object(navigation history shoukd we move to back page/front page), location object(whats the url,protocol,https or https,port, path etc) 
+in bom- we can check window.outerWidth, window.outerheight, etc amongst many others to check screen szize , navigator.userAgent- gives us the info about the computer and user info, and navigator.userActivation shows for how long has user been active
+location- location.hostname,location.href etc ,these are just a few egs theer are many more 
+
+console log(document) is used for dom and console.log(window) {then navig,locn etc under that} is used for bom 
+
+-->

@@ -99,7 +99,8 @@ git diff --summary HEAD (this cmd is used for showing the summary of changes com
 
 git stash- create a repo, work on it then commit it, after that switch to a new branch and work there
 
-git rebase- command used for merging and cleaning up all commits, it should never be run on a master/main branch, always do on a side branch
+git rebase- command used for merging and cleaning up all commits, it should never be run on a master/main branch, always do on a side branch,
+re-applies commits from one branch into another base branch
 
 git branch -M abc renames the current pointing branch to abc
 git remote -v is used to check if there's any remote repo being set, local is on my system and remote is in github, named as origin, meaning push my main branch into 
@@ -108,7 +109,15 @@ git remote add origin (link of the repo)- used to create a remote repo on github
 git remote rename oldname newname - used to rename the repo, can change from origin to abc
 
 once git push -u origin main is done on that specific repo, from next time onwards you wont be needing to add origin main, since -u works as an upstream and knows where 
-to push te=he desired code now
+to push the desired code now
+
+git clone (link of the repo you wnat to clone)- we can clone a diff repo and bring it onto our server and use it as our own repo
+
+fetch and pull- if you're actively working on a repo brings the updated code from the repository which someone else has updates into your 
+computer, except the fetch only brings the work into a your remote repo and pull brings it onto our working area, say on vsc
+git pull= git fetch + git merge   
+
+git.hidden stores all of its metadata and version history 
  -->
 
 
