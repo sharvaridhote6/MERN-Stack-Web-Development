@@ -175,6 +175,13 @@ generally in javascript everything comes under a window object, and window is a 
 specifically mentioning those, all the dom and bom code lines go in script.js file and the content will go in index.html file 
 
 dom-(dhacha/elements) document object model- basically the whole page is considered as a javascript object and named as document ,this consists of elements meaning head, body, h1, etc ie elements of a code like tags and buttons
+2 things will be done in this- both are connected- get the element(this is done after event listening- delete elemnet add and element add css props etc), event listening(mouse moved, hovered on an element, key was pressed , anything done on mouse keyboard etc)
+to make a change or mnipulate dom, make sure to grab the event first
+queryselector- allows to take a single element using css selector, returns the fuirst element matched in the doc
+getelements- uses unique id attributes/class/tags etc and finds in the doc
+addeventlisteners- 
+
+
 
 bom-(working inside dhacha) browser object model-these are the additional objects provided by the host environment for working w everything else except the document, for eg redirecting to another url , connecting 2 pages togtehr thru urls ,or giving alerts on pages
 whats the screen size height width etc, navigator object(navigation history shoukd we move to back page/front page), location object(whats the url,protocol,https or https,port, path etc) 
