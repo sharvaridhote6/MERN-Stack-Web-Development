@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #1a1a1a;
+            color: white;
+            text-align:center;
+        }
+        .highlight{
+            font-weight:bold;
+            background-color:pink;
+            color:#1a1a1a;
+        }
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript DOM example</h1>
+
+    <section id="example-1">
+        <h3>Example 1- Accessing DOM elements</h3>
+        <h2 class="highlight">Accessing the elements of DOM</h2>
+        <p id="myParagraph">This is a paragraph, click the button to change </p>
+        <button id="changeTextButton">Change text</button>
+    </section>
+    
+
+    <section id="example-2">
+        <h3>Example2- Traversing the DOM</h3>
+        <ul id="citiesList">
+            <li class="chai">New York</li>
+            <li>Tokyo</li>
+            <li>Paris</li>
+        </ul>
+        <button id="highlightFirstCity">Highlight First City</button>
+    </section>
+
+    <section id="example-3">
+    <h3>Example 3- Manipulating the DOM</h3>
+    <div id="coffeeOrder">Order:<span id="coffeeType">Latte</span></div>
+    <button id="changeOrder">Change Order to Espresso</button>
+    </section>
+
+    <section id="example-4">
+        <h3>Example4- creating and Inserting elements</h3>
+        <button id="addNewItem">Add new item to the shopping list</button>
+        <ul id="shoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+        </ul>
+    </section>
+
+    <section id="example-5">
+        <h3>Removing a DOM element</h3>
+        <ul id="tasklist">
+            <li>task1</li>
+            <li>task2</li>
+            <li>task3</li>
+        </ul>
+        <button id="removeLastTask">Remove the last task</button>
+    </section>
+
+    <section id="example-6">
+        <h3>Event Handling in DOM</h3>
+        <button id="clickMeButton">Click Me!</button>
+    </section>
+
+
+    <section>
+        
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
