@@ -12,6 +12,7 @@ console.log(gen.next().value);
 console.log(gen.next().value); //this is how you get the output for generators 
 console.log(gen.next().value);
 console.log(gen.next().value);
-
+//can yeild for 3 times, more than that undef due to no input beyond that
 console.log(gen2.next().value);
 console.log(gen2.next().value);
+//here next is an iterator, it keeps a track of the values and the ones available, keeps going until out of a bound array
