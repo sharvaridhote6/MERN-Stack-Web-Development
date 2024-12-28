@@ -197,8 +197,9 @@ console log(document) is used for dom and console.log(window) {then navig,locn e
 <!-- asynchronoys js- having a pause in network calls,write/read files,time fn, userinput, doesnt follow the sequence of what is typed, if there are 2 programs written js wont necessarily execute them in order-->
 <!-- js has no capability to run the newtwrok calls, and timer function
  
-
-
+Working of a javascript file- when a code is written the js checks the functions available in it which has to be executed, it enters the call stack first, then the event loop will check for it and execute the required task and remove it ffrom 
+call stack, incase js doesn't have the reqd features or doesn't support some of them then the event loop transfers those functions (timer funcs/network calls funcs etc) to browser/node/bun/deno, then it gets exe by that browser and goes into a queue
+it could a regular queue or fast paced etc, then its the job of the event loop to execute the functions in the queue, by the time all this happens if there are any other funcs in callstack then those are exe by event loop first and removed from it
 
 -->
 
