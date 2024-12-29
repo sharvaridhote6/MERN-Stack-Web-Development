@@ -1,7 +1,3 @@
-let sum = 0;
-// let i = 0;
-// while (i <= 5) {
-//   sum = sum + i; //sum+=i
-//   i++;
+Animal.prototype.speak= function(){
+//     return `${this.type} makes a sound`
 // }
-// console.log(sum);

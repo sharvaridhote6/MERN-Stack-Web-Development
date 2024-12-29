@@ -106,7 +106,7 @@ When a function is defined inside another function, it forms a closure. The inne
 <!-- js is basically prototype based language which is covered in obj-oriented based lang using keywords like classes, obj, constructors etc, it supports everything which oop has to support but bts is prototype based, everything is an object here
 prototype- extra functionaltites and properties in any given data type, its basically a medium through which an object can access its properties
 objects/instances- instance is an object created from class or constructor 
-dunder prototypes- 2 underscores(x)2 underscores, its can be used to access 2 prtotypes of diff objs
+dunder prototypes- 2 underscores(xyz)2 underscores, its can be used to access 2 prtotypes of diff objs
 backticks- A template literal is a way to define a string that allows embedding expressions within the string using ${}.they are used most commonly for string interpolation
 (to create strings by doing substitution of placeholders). sayfor eg- i want the output of num1+num2 as a result but the values might change, yet i dont want ti change the console then-
 console.log(`addition of ${num1} and ${num2} will be the ${result}`) [where result is- num1+num2], even while using backticks if i write `my name is
@@ -123,7 +123,7 @@ types of constr- non parameterized, parameterized and copy, NP does not contain 
 eg-(apna college )
 IN classes- the placeholders can be a variable and a function as well in js, we can store functions in a var in this
 a constructor creates objects that share the same properties and methods, and they do not have a return statement as it returns the new object automatically
-This-this keyword refers to the object being created when a function is called,
+This-this keyword refers to the newly created object when a constructor function is called,in toyota example, this.make/model is pointing to newly created new car ("tata, safari")
 New-new is used to create a new instance of the object, new keyword is used to invoke this function and return the properties and functions which are stored inside the const using this, js automatically created a new object and assigns it to this keyw, 
 a new object is created and "this" gets bound to that object and the properties and funcs assigned to this becaomes the part of the new object, If the constructor doesn't explicitly return an object, the newly created object is returned by default.-->
  
@@ -203,7 +203,9 @@ it could a regular queue or fast paced etc, then its the job of the event loop t
 
 -->
 
-
+IMP- 
+<!-- module,require, __filename, __dirname, exports these keywords are automatically wrapped in a function when we write commonJs code in node.js, hence we get
+ to use all tehse variables directly -->
 
 
 

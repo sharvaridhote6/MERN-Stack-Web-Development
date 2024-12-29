@@ -1,4 +1,4 @@
-//prototypal chain
+//prototypal chain-main idea is to access the whole chain and also inject our own methods  
 function Animal(type){
     this.type=type
 }
@@ -11,6 +11,7 @@ Array.prototype.sharvari= function(){
 }
 let myArray=[1,2,3,4]
 console.log(myArray.sharvari());
+
 
 
 
@@ -56,8 +57,8 @@ class Person{
 }
 class Engineer extends Person{
     constructor(name){
-        super(); //used to invoke parent's class const
-        
+        super(); // if we;re creating a constructor in derived class, we have to use super keyw in order to make it work w/o error
+        //used to invoke parent's class const
     }
     work(){
         return`works`;

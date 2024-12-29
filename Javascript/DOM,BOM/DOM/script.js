@@ -58,7 +58,35 @@ document.getElementById("removeLastTask").addEventListener("click",function(){
 
 //example6- event handling 
 document.getElementById("clickMeButton").addEventListener("dblclick",function(){
-     
+     alert("chaicode");
+})
+
+// example7- event delegation
+document.getElementById("teaList").addEventListener("click",function(event){
+    //  console.log(event.target);
+    if(event.target && event.target.matches(".teaItem"))
+    alert("you selected:" + event.target.textContent);
+})
+//.teaItem(dot) is used for class and # for Id, line 67 says that event.target will be found out on click and matches shows that event item should only be teaItem because if there is anything
+// else, different events then that shouldn't count 
+
+
+
+// example8- form handling, most imp- when writing code on form, anything w form handling, we use preventDefault to prevent the default form getting submitted
+document.getElementById("feedbackForm").addEventListener("submit",function(event){
+    event.preventDefault();
+    let feedback= document.getElementById (completeit)
 })
 
 
+// example9- Dom content loaded
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("domStatus").textContent="DOM fully loaded"
+})
+
+
+// example10- css manipluation
+document.getElementById("toggleHighlight").addEventListener("click",function(){
+    let descriptionText=document.getElementById("descriptionText");
+    descriptionText.classList.toggle("highlight");
+})
