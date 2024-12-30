@@ -62,3 +62,21 @@ console.log(1 + "1"); // never rely on js implicit version as it considers that 
 let isValue = "2abc";
 console.log(Number(isValue)); //op will be NaN which means- not a number
 console.log(typeof Number(isValue));
+
+
+// to find the type of the data
+let score=33;
+let marks="33";
+let data= "33abc";
+console.log(typeof score); //number
+console.log(typeof marks); //string
+ 
+// conversion of string to number
+let value=Number(marks)
+console.log(typeof value); //changed to number
+let value1= Number(data)
+console.log(value1); // NaN -not a number
+console.log(typeof value1); //string
+
+// console.log(booleanABC)- for booleanABC w following values
+// true=>1, false=>0, ""(empty string)=> false, "some string" =>true 

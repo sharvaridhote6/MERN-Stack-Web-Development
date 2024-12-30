@@ -28,7 +28,7 @@ let subtract = 9 - 3;
 let mult = 3 * 5;
 let divide = 8 / 2;
 let remainder = 9 % 2;
-let expo = 2 ** 3;
+let expo = 2 ** 3; //2 to the power 3 
 
 let myscore = 110;
 myscore++;

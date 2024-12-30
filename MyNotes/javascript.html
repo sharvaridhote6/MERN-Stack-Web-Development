@@ -8,6 +8,10 @@ to something else by overriding it
 console.log only prints what we type in the console it doesnt return us anything or give us anything back ,to do it we can use keyword return
 where the function will get returned and closed on that line
 
+var- this is the oldest keyword used in js, it has a global scope, if once declared out of the block, it can be accesed anywhere in the file, and if declared 
+inside the block then can access only in that block
+let-this is a new version of var introduced in ES6 in 2015 which has a local scope (only till the block) 
+const-this has all properties that of let , same local scope, except it cannot be declared twice w same name, every time have to declar enew const variable
 
 void keyword- The void keyword in JavaScript, is used to evaluate an expression which does not return any value,by using it, we can prevent the browser 
 from displaying the result of the execution of the expression.
@@ -169,7 +173,11 @@ change internal implementation bts w/o affecting the user, helps in increasing s
 and used to define derived classes typically and -->
 
 
-                            -------------DOM BOM----------------------<!--
+                                                  ----------------------POLYMORPHISM----------------
+<!-- POLYMORPHISM- describes the ability of something to have or to be displayed in more than one form , different forms might arise because these entities can be assigned diff meanings and used in various multiple contexts, it basically means the 
+presentation of one's interface for multiple data, so depending on the conext an object can take on differrnt forms and behave in different ways -->
+
+                                                      -------------DOM BOM---------------------- <!--
 WE have an object window- inside that we have 3 things- DOM, BOM, javascript
 generally in javascript everything comes under a window object, and window is a global object and basically provides a way to control the whole page and elements in it by 
 specifically mentioning those, all the dom and bom code lines go in script.js file and the content will go in index.html file 

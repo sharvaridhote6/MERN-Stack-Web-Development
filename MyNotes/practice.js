@@ -50,3 +50,8 @@ console.log(admin2);
 console.log(student1.viewData());
 console.log(student1);
 // in output line 46 ANd 50 will show undefined due to missing explicit return function
+
+
+// Create a constructor function Animal that has a method speak() that return 'Animal speaking'.
+// Then create another constructor Dog that inherits from Animal using prototypes.
+// The Dog constructor should add a method bark() that returns 'Woof!'. Demonstrate the prototype chain between Dog and Animal.

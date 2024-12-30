@@ -79,9 +79,8 @@ console.log(human.eat);
 
 
 
-
 //ENCAPSULATION
-class Bankaccout{
+class bankAccount{
     #balance= 0; //hash means it wont be able to access by anyone outside this class, only inside though
 
     deposit(amount){
@@ -92,10 +91,104 @@ class Bankaccout{
         return `${this.#balance}`
     }
 }
-let account = new Bankaccout();
+let account = new bankAccount();
 console.log(account.getBalance());
+// The # symbol before the variable name makes it private in JavaScript
+
+ 
+
+//Abstraction-
+class coffeeMachine{
+    start(){
+    return`Starting the machine..`
+    }
+    brewCoffee(){
+        return `brewing coffee`
+    }
+   
+pressStartButton(){
+    let msg1=this.start();
+    let msg2=this.brewCoffee();
+    return `${msg1}+${msg2}`
+}
+}
+let myMachine= new coffeeMachine();
+console.log(myMachine.start());
+console.log(myMachine.brewCoffee());
+console.log(myMachine.pressStartButton()); // will show undefined because we didn't store the return values anywhere and directly called them, if we cancel out the let msg1/2 vars and only go w this. keyw
+console.log(myMachine.pressStartButton());
 
 
 
-//Abstraction
+// polymorphism
+class bird{
+    fly(){
+        return `flying...`
+    } 
+}
+class penguin extends bird{
+        fly(){
+            return`penguins can't fly`;
+        }
+    }
+let Bird= new bird();
+let Penguin= new penguin();
+console.log(Bird.fly());
+console.log(Penguin.fly());
+
+
+
+// static method- these are special methids which can only be called by the class itself, cannot be accessed by instances of the class, they're directly accessed on the class
+class calculator{
+    static add(a,b){
+        return a+b
+    }
+}
+// let minicalc= new calculator();
+// console.log(minicalc.add(2,3));
+console.log(calculator.add(2,3));
+
+
+
+// // getters and setters- WE DO NOT RETURN SETTERS, AND GETTERS ARE ALWAYS RETURNED
+//  this gives controls over accessing the variable, or adding value to a var
+// get,set takes the parameters of constructor and uses them as methods, and its necessary to define both together
+// getter is used to get value of class from outisde and setter is it to set it 
+class employee{
+    constructor(name,salary){
+        this.name=name;
+        this._salary=salary
+    }
+    get salary(){ //whole idea behind this is what we waant to do when we get and set the salary
+        return `you are not allowed to see this salary`;
+    }
+    set salary(value){ //there's always a value in setter since its literal job is to set
+        if (value<0) {
+            console.error("invalid salary")
+        }else{
+            this._salary=value;
+        }
+    }
+}
+let emp= new employee("alice", 5000);
+console.log(emp._salary); //allowed (js flaw)
+console.log(emp.salary); //not allowed
+
+
+// eg2-
+class user{
+    constructor(password,email){
+        this.password=password;
+        this.email=email;
+    }
+    get password(){
+        return `${this._password}.Sharvari` //due to this function we will get o/p in uppercase
+    }
+    set password(value){
+        this._password= value//.toUpperCase() this can be removed because while getting the user will get access to upper case value only,although while setting it wont be the same, matlab setting is done w actual value but that value when accessed by getter its turning into uppercase  
+    }
+}
+const hitesh=new user("shar","123")
+console.log(hitesh.password);
+// issue here is that we're trying to set password value in setters and constructor both, hence to solve it, create a new variable by underscore, hence overwritting the password
 
