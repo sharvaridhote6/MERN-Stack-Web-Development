@@ -1,4 +1,5 @@
 {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-    "notebook.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "notebook.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "livePreview.defaultPreviewPath": "/FRONTEND/Tailwind/src/login.html"
 }
