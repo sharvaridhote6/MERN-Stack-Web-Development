@@ -1,0 +1,54 @@
+<!-- 
+react is used to make it easy to build complex frontend, its a js lib which is built on the foundations of js - it is js+htmk+css, does these jobs together at once
+
+imp- class vc functional components
+react is a single page application, meaning it loads once and other work is done by js, we can move to different pages on the website without re-loading, its a library not a framework
+how SPA works- in every web application or website, we have DOM nodes, what react does is remove those nodes and inject the nodes in the place so we don't have a full page reload
+jsx- javascript xml, xml extension file to javascript lang, JS + HTML/XMLsyntax, it returns the html from js.  
+
+ npm view react version- shows the verison of react installed 
+*npx create-react-app 01basicreact- creates a folder named 01basicreact and installs all the react packages 
+ npm list react-scripts- shows which scripts are dated till which version
+ npm list react react-dom- shows versions of react and react-dom
+ npm audit- shows vulnerabilities
+ npm audit fix/--force- removes vulnerabilities
+
+Props- are used to send data from one component to another, parent component can pass info to their child using this, ({}) syntax is called destructuring, 
+
+React-dom is a web application which react uses to talk to the dom in order to connect with it
+React-native is used for making the mobile application
+
+start the file name of a jsx file with capital letter, else it throws an error
+pkg-lock,json - is json only except these depoendencies get locked that they'll work only on the specifced version 
+
+to open the basic react window, go to the react0 folder- (cd react0) then run npm run start
+to run the vite app- it doesnt have a start script, so we'll invoke dev(given in package,json)
+
+we can save a file as js/jsx due to babel( a js complier) which trasplies them into js code anyways,: Large projects often use .jsx for React 
+components and .js for logic, utility functions, or non-React code., It’s basically  a matter of convention and clarity rather than a technical requirement.
+
+virtual dom- reconciliation is the algorithm behind what is called as virtual dom, isn't used now, was used before, createRoot creates a DOM like structure and compares main dom(browser dom) and the dom created by it and changes only the UI
+which is updated, browser on the other hand reloads the whole page meaning completely restructures dom, in virtual dom it tracks the main dom and changes only the things which 
+are changed there
+
+fibre- virtual dom does exist still but the algorithm to update that is called react fibre, in the UI its not necessary to make updates immediately, this can cause frames to drop and degrading the overall exp,
+key features- ability to pause, abort, or reuse work as new updates come in, and ability to assign priority to diff types of updates, fibre is a high-level rewrite of the reconcilier
+what all does it help us do- pause work and come back later to it, assign priority to different types of work, reue previosuly completed work, abort work if its no longer needed 
+
+hydration- when the buttons etc compos are designed by html/css they can't be clicked yet cause no js, so when the js is injected its called hydrated
+
+state- it gets constantly monitored, and any change in the state re-renders the ui on the web
+
+reconciliation- reconsiders what to update and not, react uses differentiate one tree w another (comparing 2 trees of the node list one of browser one of createRoot) determines which part needs to be changed
+react virtual dom, react fiber, batching of update
+
+
+imp- theres an array, you have to loop it and bring values in list buttons etc, then KEYS should be introduced,because using fibre for an HL algo, we have to use keys to improve list performance, since they're stable, predictable and
+unique 
+
+memoization- caching the results of expensive function calls and returning the cached result when the same inputs occur again.
+api- developer never thinks of how he'll go in one state from another, or doesn't focus on how the vars are changed, because react algos do all the job, 
+
+if we want to render any changes in the UI then those changes cannot be directly propagated, we have to use a state management for this, in ract we have a hook known as use state
+
+-->

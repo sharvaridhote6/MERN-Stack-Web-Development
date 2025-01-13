@@ -1,0 +1,3 @@
+This is password generator created in react where we have a slider, and based on the slider it generates a password which includes upper and the lower case letters. As soon as we refresh the page an initial password is generated, when any component is touched it changes its values and re-runs the code, which is ultimately responsible for generating the password. There is also an option of copying the password which is being generated.
+
+Additionally, a concept of memoization in used this, which is an optimization technique used for the performance of the functions where it helps us to speed the process of execution of these functions.

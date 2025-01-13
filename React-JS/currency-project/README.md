@@ -1,0 +1,1 @@
+This is a currency project, with the goal of understanding concept of reusability, there is a button for conversion of the currency and it converts the currency from one form to another, which is coming from a url, another button provides for swapping of the currencies
