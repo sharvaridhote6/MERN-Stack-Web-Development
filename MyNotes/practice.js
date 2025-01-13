@@ -4,6 +4,21 @@
 // let a =abc();
 // console.log(a); 
 
+//to flip a boolean val
+function flipBoolean(input) {
+    return !Boolean(input) //flips the boolean value
+}
+console.log(flipBoolean(0));
+
+
+// Write a function stringToNumber that takes a string input and tries to convert it to a number. If the conversion fails, return "Not a number".
+function stringToNumber(input) {
+    const num= Number(input)
+        return isNaN(num) ? "Not a number" : num;
+}
+
+
+// 
 
 // function greetuser(){
 //     console.log("shar");
