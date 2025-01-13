@@ -19,7 +19,7 @@ let getScore = score; //borrowing score value to getscore
 console.log(getScore); //102
 
 let gameName = "spiderman";
-gameName = "spideyy";
+gameName = "spideyy"; 
 console.log(gameName);
 
 // OPERATIONS:
@@ -31,10 +31,12 @@ let remainder = 9 % 2;
 let expo = 2 ** 3; //2 to the power 3 
 
 let myscore = 110;
-myscore++;
+myscore++; //increment
 
 let credits = 56;
-credits--;
+credits--; //decrement
+
+
 // comparison operation
 let num1 = 3;
 let num2 = 3;
@@ -56,7 +58,7 @@ console.log(isloggedin && ispaid);
 
 let isemailuser = true;
 let isgoogleuser = true;
-console.log(isemailuser || isgoogleuser);
+console.log(isemailuser || isgoogleuser); 
 
 //assignment ops
 let num7 = 10;

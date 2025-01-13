@@ -20,7 +20,8 @@ let isstring = "yey";
 let mystring = `hey`;
 let yourstring = "sharvari";
 let evastring = isstring + " " + "hey" + " " + yourstring;
-console.log(typeof isstring);
+console.log(typeof isstring); //string
+console.log(typeof mystring); //backticks are used for string interpolation, ans is string
 console.log(evastring);
 
 let message = `hello ${yourstring}`; //string interpolation
@@ -28,12 +29,12 @@ console.log(message);
 let demo = `value is ${2 * 2}`;
 console.log(demo);
 
-let sm1 = Symbol("xf");
+let sm1 = Symbol("xf"); 
 console.log(sm1);
 
-let sm2 = Symbol();
+let sm2 = Symbol(); 
 let sm3 = Symbol();
-console.log(sm3 == sm2); //false cause syms are diff
+console.log(sm3 == sm2); //false cause syms are diff, always give a unique value to each symbol to avoid confusion in future code changes 
 
 let sym = Symbol("foo");
 let symb = Symbol("foo");
@@ -59,8 +60,8 @@ console.log(demos[0], demos[1]); //gives output normally for more than one value
 console.log([demos[0], demos[1]]); //gives output in array format
 console.log(1 + "1"); // never rely on js implicit version as it considers that if one is string other might be too
 
-let isValue = "2abc";
-console.log(Number(isValue)); //op will be NaN which means- not a number
+let isValue = "2abc"; 
+console.log(Number(isValue)); //op will be NaN which means- not a number 
 console.log(typeof Number(isValue));
 
 
@@ -76,7 +77,7 @@ let value=Number(marks)
 console.log(typeof value); //changed to number
 let value1= Number(data)
 console.log(value1); // NaN -not a number
-console.log(typeof value1); //string
+console.log(typeof value1); //number
 
 // console.log(booleanABC)- for booleanABC w following values
 // true=>1, false=>0, ""(empty string)=> false, "some string" =>true 

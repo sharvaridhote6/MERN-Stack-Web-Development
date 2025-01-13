@@ -18,7 +18,7 @@ if (username == username2) {
 
 //checking if a var is a number or not
 let score = 33;
-if (typeof score === "number") {
+if (typeof score === "number") { // difference in === and typeof is, that === checks the value and type both, while typeof only checks the type
   console.log("yes its a number");
 } else {
   console.log("nope wrong");
