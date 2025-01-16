@@ -29,18 +29,11 @@ document.getElementById('DOMContentLoaded', ()=>{
         if(!response.ok){
             throw new Error('City not found');
         }
-        const data=await response.json();
-        return data
     }
-
     function displayData(weatherData){ //displays data
-        console.log(data);
-        const{name, main, weather}=data
-        cityName.textContent=name;
     }
-
     function showError(){
-        weatherInfo.classList.add("hidden");
-        errorMessage.classList.remove("hidden");
+        weatherInfo.classList.add('hidden');
+        errorMessage.classList.remove('hidden');
     }
 })

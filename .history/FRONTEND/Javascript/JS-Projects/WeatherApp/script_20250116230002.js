@@ -22,25 +22,15 @@ document.getElementById('DOMContentLoaded', ()=>{
     });
 
     async function fetchData(city){ //gets the data
-        const url=`https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid={API key}`
-        const response= await fetch(url);
+        const url=`https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
+        const response= fetch(url);
         console.log(typeof response);
         console.log("response",response);
-        if(!response.ok){
-            throw new Error('City not found');
-        }
-        const data=await response.json();
-        return data
     }
-
     function displayData(weatherData){ //displays data
-        console.log(data);
-        const{name, main, weather}=data
-        cityName.textContent=name;
     }
-
     function showError(){
-        weatherInfo.classList.add("hidden");
-        errorMessage.classList.remove("hidden");
+        weatherInfo.classList.add('hidden');
+        errorMessage.classList.remove('hidden');
     }
 })
