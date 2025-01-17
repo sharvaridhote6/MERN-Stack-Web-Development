@@ -1,0 +1,210 @@
+<!-- USE MDN REFERENCES FOR MOST CASES -------------HTML----------------- GENERAL -->
+TIPS:
+<!--
+make sure to watch videos >=10 mins completely and then code, not alongside. Do it only when the video is longer than 10 mins, bookmark the 
+difficult chapters, come back to it and do it till you understand completely, or go to Apna College course and do it. Make sure to understand 
+it though, If you get stuck go to stack overflow, and think that you're a complete actual programmer now, a professional and its a part of your 
+skilled intelligent hardwork which you gotta do in order to succeed, even if its tough, you're worth it!-->
+
+BASICS:
+<!--  ()-parenthesis,[]-brackets,{}-braces
+<>- angle brackets, as a whole is a tag, <xyz>hgk </xyz> is an element, there are headings till 6, no 7, H1 is the biggest and h6 is the 
+smallest heading, only give heading h1, preferably have only one of it, no skipping of levels, and go only till h6, give paragraph tags on new 
+lines and br tags on same lines, void element does not have any content in between those tags- <hr/> = horizontal line for differentiating 2lines 
+or paras, type of a break element, one more is <br/>, a complete line can be commented out by ctrl+/ 
+link to a new page- when we use target blank to open on a new page, that newly oopened page has the ability to access the window opener(a feature 
+which allows the new tab to interact with the one that opened it) which can be exploited by malicious actions, hence rel="noopener" can help us create
+security -->
+
+IMG and ANCHOR TAGS:<!--
+in an image we can add title to the src and while hovering on the img we can get that title, <img src="imgcopyaddr" title/width etc alt="incase pic
+doesnt load"/>, an anchor tag is used for href links, to redirect on another page or link using <a href="pglink">text here goes on the link</a>
+similarly video can be done, <video src="link" width/height etc. controls></video>, action in html is used to specify where the data is stored
+after submitting the data, when we have to use an href attribute to link something and want it to open on a new page, then we can use-
+<a href="link" target="_blank"></a> attribute-->
+
+LISTS:<!--list-style-type is used for removing the list bullets, all ul ol lists have their own paddings and margins.
+unordered lists are in bullet points and ordered are in numbered points, for nesting a list in another one, start just after the element in that,
+nest the list before the </li> of the list you're nesting in, for more goto index2.html, anchors create hyperlinks to web pages - href ,i.e,
+a link can be added, we can convert the link to any text, img src is used for source of images and alt for alternate text description, 
+meaning if the image doesn't load or if its url is wrong, this alt will be shown. We can copy addr img and paste it for img src or we can save the
+image in a new folder in which our index file is there where we are coding and add this new png saved image file to that folder, then we can 
+add the name of file as img src in the code.-->
+
+FILE PATHS:
+<!--
+the file paths are root->project->images-> where = (for eg) ../essay.docx means to go up a level in file paths, ./dog.png is used to stay in
+the current directory and find for the dog file there, that means ./ gets us into the parent directory of the current one and ../ gets up one
+level above that is the parent of the parent directory; a point is slightly bigger than a pixel, 1 rem is a 1x root size, 2rem is 2x etc,
+A border-width can take 4 inputs, going around in clockwise direction.-->
+
+TABLES:<!-- tables contain table rows table headings and table data named tr and th and td resp ,use mdn reference by hovering it on keywords 
+to have detailed info as to what to do and how to use it, special characs are started with & sign, eg- &copy is used for copywright marks
+<caption></caption> tag is used to highlight the short title or the main brief content of what is in the table, tr- row, td- data, th- header
+td and th are used inside tr, to wrap table body, header and foot, we use tbody thead tfoot, emmet shortut to write lists are li*x after
+<ul> etc . When we're creating an <article></>, common prac is to have <section></section> -->
+
+FORMS:<!--forms are used to put some input into, or use label tags etc-->
+
+BUTTON:
+<!--using <button>xyz</button> we can create a button feature-->
+
+TOOLTIP:
+<!--this is used to show some text by hovering on a certain text, syntax-
+<p title="This is a tooltip text">Here the tooltip is shown</p> -->
+
+--------------CSS---------------
+<!--Most important thing ina CSS is its font style, second most important thing is the images, and third is component, how our buttons lists and
+cards look like-->
+POSITIONING:
+<!--
+In CSS, positioning of code is vv imp. From outside to in it goes- margin-border-padding. Order of specificity- id, attribute, class, element 
+(class selector starts w a dot),if 2 of same thing are there, position rule applies- last one is considered. Order- inline, internal, external. 
+We can add !important; keyword to give 1st priority. Order for type- importance keyw, inline internal, class specificity, position. 
+If its h1- element, or id- #something, classes- .something, then acc to the order written they will be applied for chaining for combining 
+selectors. "z-index" can be used to put the element behind others on the screen using -1, default z index for everything is 0 on screen.
+Static positioning- does not have any effect anywhwere, no top no bottom no left no right
+relative- the styling applied to this is relative to its parent div
+absolute- this is relative to its closest positioned ancestor, whichever closest parent has positions mentioned, hence for absolute to work it needs
+to be placed in nested divs w parent div positioned properly.
+fixed- is the position fixed on the screen, it is removed from the document and its position is fixed on the screen 
+-->
+
+FLOAT:<!-- S
+this property applies only on the img feature not on text/paragraph, every text around img gets wrapped up around it, incase we want to remove 
+something, we can place the name of what we want to remove and use the word "clear" : left/right, although float should only be used to do basic
+things like wrap text around an image-->
+
+FONT AND FONT SIZE:
+<!--you can go on google fonts and select the font you like, get that font and copy the code they give you in your style css and change the font-fam 
+to what it says border-width can be set in a cw direction, say if we set 0px 10px 15px 20 px, then it will be resp for top right bottom left. we can 
+also provide 2 values, the first one will be for top+bottom and second for left+right. Font size can be used as px or rem or em, px gives you the 
+direct sixe, em gives you the size as to double of px, meaning if size is 10 px,then 3em will be 30 px. For setting padding margin width height 
+we can use em for that specific element, if suppose we want to not let the padding given to an element change when we change the font size of the 
+text in it, then we can use 1em in order to keep that padding same for all sized fonts, values setting for em is in relation to parent or self,
+rems is for root element eg-<html> and parent can be class name -->
+
+DIV:(CONTENT DIVISION ELEMENTS)
+<!--
+div is used to create a block like structure, meaning if you give some id to div, then you can style and put different things in it by using 
+properties in its css, shortcut to create div class is type "div.(class name)" and hitting enter -->
+
+To create a circle in CSS-
+<!--
+.create a class{
+background-color: ;
+width: ;
+height: ;
+border-radius: is used to make the edges round, 50% OR 100px; these are max values for a circle, beyond that it doesn't make it more round.
+}
+half of the position value will be the border radius in order to make a circle, for eg- if width and height are 100ox each, then its border
+radius will be 50 px-->
+
+BOX-SHADOW-<!--offset means the space given from top/bottom etc, called as top offset etc. syntax is box shadow: horizontal-offset vertical-offset
+blur-radius-->
+
+DISPLAY:
+<!-- Padding is always inside, margin is outside , border boxing means the margin+padding+border for a box
+when any bg color is added it gives its own margin and padding sometimes, hence we should remove it in the start, keeping margin:0;, 
+padding:0; vh- viewport height can be added as a unit to cover the entire viewport space on the screen using height attribute, it means
+that even if the page is shrinked the 100vh keeps everything in the middle of the page.
+gap attribute can be used to create gaps w pixels in between a class. 
+.class:nth-child(even){
+bg color:xyz} this can give bg color to selected even children only, nthchild is specifically used for even only-->
+
+Block property-
+<!--in css display file is used to line everything ,(the full width of the container or browser window if there is no container) 
+it means that the whole width is given to one block. headings are block elements. In block elements when width is set to 300px, it means the true
+width is 300 itself, excluding padding, margin or border, eg of block is div
+-->
+Inline elements-<!-- are unaffected by width height etc, although padding can be done in it. A span is an inline element, used to group elements 
+using <span></span>, it does not set width and height,it can set border ,it can set margin and padding that too only for left and right, 
+for inline only the amount of the text will be considered hence the block will be adjusting itself only w that. Span means how much area is 
+covered on the page by an element. images are inline elements.
+When we say in inline elements the width is 300 px, that means it has padding+ margin + border included in it, 300 is not the actual width unlike
+block elements -->
+
+Inline block-<!-- means using both the properties, when we have to align blocks in one line , using only inline they can be aligned but no other 
+property will be considered, and using block the whole line will go to one block, hence to keep blocks algined on one line w all props this is 
+used.-->
+
+SELECTORS:
+<!--Ideally the selectors are read from right to left.
+Parents, child, and descandents are there. DOM-document object model, this is the ability to change your html code into a tree/object model 
+which can be rendered on the browser. 
+1) Universal selector- this selectes everything and sits on the top of the code, for eg if we keep margin:0; all the text will get applied w it
+2) Type selector- its the general selector what we noramlly use, target an element and style it
+3)Class Selector -target classes using . and style them 
+4) ID selector- have ideally only one unique # on one web page, #xyz {go ahead and style it}
+5)Attribute selector- selects and attribute and styles, input[type="text"]{border:px solid/dashed color, etc}
+
+80-90% of CSS SELECTORS ARE DONE ABOVE SINCE THEY'RE THE MAJOR ONES- BELOW ARE THE NOT MUCH USED, ONLY DONE BY THE ONES WHO WANT MASTERY IN CSS
+
+6)Descandent selector- targets descandent elements, ones which are children of children 
+7)Child selector- targets directly children elements 
+8) Adjacent sibling selector- h1+p, meaning p being an adj selector of h1 we can choose and style it
+9) general sibling selector- chooses all the siblings, eg - h2 ~ p means all paragraph siblings of h2  
+-->
+
+<!---->
+
+AFTER KEYWORD:<!--it creates a pseudo element that is the last of selected element, it is inline, -->
+
+<!--to target a specific input field in the form to style, you can use input[type="email/pass etc"]{}
+ required word is used after specifying these in input field to put the necessary toggle-->
+
+-----------RESPONSIVENESS--------- RESPONSIVE BREAKPOINT-
+<!--is when the background colour or any styling changes when media query is applied and the page is changed -->
+
+MEDIA QUERY:<!-- 
+in this the responsiveness of the website can be done, (min width) (max width) range can be set with @media and we can use "and" with spaces on
+both sides of the word keyword to set range, and then set properties in it, we can change its orientation from portrait to landscape, media query
+is css in itself you have to mention where you are applying the styling, using that specific class
+-->
+
+------------FLEXBOX-------------
+<!--
+2 major things- main access- moves from left to right and other access
+style="flex-wrap:wrap" is used for moving the elements onto the next line since by default they are plced in one line from l to r only
+when we set height to auto it doesnt take up extra space,this can be done one a normal page by using width 100% and height 100vh
+style "order" is used to control child inside container specifically, flex-grow is another peoperty used to give the ratio to the elements,
+again it targeets specifically the child emelents inside. align-self is used to specifically work on each element in detail, all this is shown
+is flexbox file.
+
+display:flex; (is in a row structure by deafult since main access is from left to right)
+justify-content:center;
+align-items:center;   
+used in login page, this is used to align everything in the center, justify content is used for x axis, and align items is used for y axis
+
+display:flex;
+flex-direction: column -reverse(reverse the order makes it asc to dec)/
+                column(aligns everything into columns)
+
+align-content aligns acc to container
+align items aligns acc to the groups
+align-self aligns acc to the specific particular element
+
+align-contents: space-between/space-around/baseline/space evenly 
+space between-the space around the items the cross axis will get distributed evenly between the rows
+space around- similatr to betn but there will be even space var and khali of the first and last rows 
+space evenly -spaces out everything evenly
+baseline-similar to flex start by default 
+align-self: flex-end/start/baseline
+-->
+
+-------------GRID-----------
+<!-- specify the rows and colums you want, grid divides the whole page into 100% and fr is one fraction, and this is done w the help of gtc-
+grid template column, you have to specify fr for each individual item in the grid container, similarly in gtr(rows)we can use px to show that
+we can control rows ,for eg-100px 200px, this means that 100 will be for row1 and 200 will be for row 2, there is another word repeat(), it takes
+2 things-count and size for eg, if you have 10 items and have to give them 1fr, using repeat(10,1fr), where it signifies 10 cols getting 1fr.
+
+The controllability of how much row and column you'll be consuming can be defined in the element itself and not the parent one.-->
+GRID TEMPLATE AREA:<!--this is used to create a header sidebar main footer page, where the parent div is grid template areas, plural since more 
+than one, and in styling the div <"grid area: header;">Header</div> , while in parent div if we put 'header header header', it means that 1st 2nd
+3rd 3 areas/ratios are governed by header, we can increase it to the number we want to. -->
+AUTOFIT-<!--this is similar to flexwrap, it fits the contents in the page even if you change its dimensions, its coded like-
+<style="gtc-repeat(auto-fit,minmax(100px,1fr))"  meaning the elements will have 100px max and will shift down if page gets smaller-->
+
+----------------BOOTSTRAP----------------
+<!--no need to explicitely learn bootstrap, we can go on its website and using our normal css we can read its docs and copy paste the code we want 
+for that -->
