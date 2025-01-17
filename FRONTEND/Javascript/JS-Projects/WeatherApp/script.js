@@ -1,4 +1,4 @@
-document.getElementById('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', ()=>{
     const cityInput= document.getElementById("city-input");
     const weatherButton= document.getElementById("get-weather-button");
     const weatherInfo= document.getElementById("weather-info");
@@ -21,10 +21,11 @@ document.getElementById('DOMContentLoaded', ()=>{
         }
     });
 
-    async function fetchData(city){ //gets the data
-        const url=`https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid={API key}`
+    async function fetchData(city){ //gets the data,A JavaScript method to make HTTP requests. Returns a promise that resolves to a Response object.
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`
         const response= await fetch(url);
         console.log(typeof response);
+        console.log("Response status:", response.status, "Response OK:", response.ok);
         console.log("response",response);
         if(!response.ok){
             throw new Error('City not found');
@@ -34,12 +35,20 @@ document.getElementById('DOMContentLoaded', ()=>{
     }
 
     function displayData(weatherData){ //displays data
-        console.log(data);
-        const{name, main, weather}=data
+        console.log(weatherData);
+        const{name, main, weather}=weatherData
         cityName.textContent=name;
+        temperature.textContent=`Temperature:${main.temp}`
+        description.textContent=`Weather:${weather[0].description}`;
+
+        //unlocking the display
+        weatherInfo.classList.remove("hidden")
+        errorMessage.classList.add("hidden");
+        
     }
 
     function showError(){
+        console.log(error);
         weatherInfo.classList.add("hidden");
         errorMessage.classList.remove("hidden");
     }
