@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const totalAmountDisplay= document.getElementById("total-amount");
     const expenseAmount=document.getElementById("expense-amount");
     
-    let expenses=[];
+    let expenses=JSON.parse(localStorage.getItem('expenses')) || [];
     let totalAmount= calculateTotal()
 
+    renderExpenses()
 //adding amounts and pushing data in the array 
     expenseForm.addEventListener('submit',(e)=>{
         e.preventDefault()
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
             expenses.push(newExpense)
             saveExpensesToLocal();
+            renderExpenses();
             updateTotal()
 
             //ckear input
@@ -29,6 +31,15 @@ document.addEventListener('DOMContentLoaded',()=>{
             expenseAmount.value=""
         }
     })
+    function renderExpenses(){
+        expenseList.innerHTML=""
+        expenses.forEach(expense=>{
+            const li= document.createElement('li');
+            li.innerHTML=`${expense.name}-$${expense.amount}
+            <button data-id="${expense.id}">Delete</button>`;
+            expenseList.appendChild(li); 
+        })
+    }
     function calculateTotal(){
         return expenses.reduce((sum, expense)=>sum + expense.amount,0)
 
@@ -40,4 +51,16 @@ document.addEventListener('DOMContentLoaded',()=>{
         totalAmount=calculateTotal()
         totalAmountDisplay.textContent=totalAmount.toFixed(2); 
     }
+    
+    
+    expenseList.addEventListener('click',(e)=>{
+        if(e.target.tagName === 'BUTTON'){
+        const expenseID= (e.target.getAttribute('data-id'))
+        expenses= expenses.filter(expense=> expense.id!== expenseID)
+
+        saveExpensesToLocal();
+        renderExpenses();
+        updateTotal();
+        }
+    })
 })
