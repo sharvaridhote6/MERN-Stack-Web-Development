@@ -30,6 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let score=0;
 
     startButton.addEventListener("click",startQuiz); //same as our regular function but defining the func outside
+    
+    nextButton.addEventListener("click",()=>{
+        currentQuestionIndex++;
+        if(currentQuestionIndex<questions.length){
+            showQuestion();
+        }
+        else{
+            showResult();
+        }
+    });
+
     function startQuiz(){
         startButton.classList.add("hidden");
         resultContainer.classList.add("hidden");
@@ -39,5 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function showQuestion(){
         nextButton.classList.add('hidden');
         questionText.textContent= questions[currentQuestionIndex].question;
+        choiceList.innerHTML=""; 
+        questions[currentQuestionIndex].choices.forEach(choice=>{
+            const li=document.createElement("li");
+            li.textContent=choice;
+            li.addEventListener("click",()=>selectAnswer(choice));
+            choiceList.appendChild(li);
+    })
+    }
+    function selectAnswer(choice){
+         const correctAnswer=questions[currentQuestionIndex].correctAnswer;
+         if(choice===correctAnswer){
+             score++;
+         }
+         nextButton.classList.remove('hidden');
+    };
+    
+    function showResult(){
+        questionContainer.classList.add("hidden");
+        resultContainer.classList.remove("hidden");
+        scoreDisplay.textContent=``
     }
 });
