@@ -9,6 +9,7 @@ import About from './components/about/About.jsx';
 import User from './components/user/User.jsx';
 import Github, { githubInfoLoader } from './components/github/Github.jsx';
 
+
 const router= createBrowserRouter(
   createRoutesFromElements(
     // / means the path will match the root url, no path means home componenet will be in root url itself inside the layout, layout component is rendered when user visits the root url, path about means it matches the about path relative to its parent 
