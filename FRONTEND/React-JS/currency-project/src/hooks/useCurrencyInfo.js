@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 function useCurrencyInfo(currency){  //no optional argument, currency is a variable passed
      const[data,setData]=useState({})
     useEffect(()=>{
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+     fetch(`https://www.floatrates.com/daily/${currency}.json`)
         .then((res)=>res.json())
         .then((data)=> setData(res[currency]))
+        .catch((error) => console.error("Error fetching currency data:", error));
      },[currency])
      console.log(data);
      return data
