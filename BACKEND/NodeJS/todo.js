@@ -23,6 +23,11 @@ const addTask= (task)=>{
     console.log('Task added')
 }
 
+const listTasks= ()=>{
+    const tasks= loadTasks()
+    tasks.forEach((task, index)=> console.log(`${index+1}-${task.task} `))
+}
+
 const command = process.argv[2]//process.argv contains cmd line args
 const argument = process.argv[3]
 
