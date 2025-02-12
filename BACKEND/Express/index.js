@@ -1,8 +1,13 @@
 import express from 'express';
+import 'dotenv/config';
+import logger from './logger.js';//logger is a custom module that logs all the requests that come in
+import morgan from 'morgan';//morgan is a middleware that logs all the requests that come in
 
-const app= express();
-const port= 3000;
+const app= express(); 
+const port= process.env.PORT || 3000;
 app.use(express.json()); //middleware, meaning it will run before any route is hit and it will convert any data coming in the JSON format
+
+const morganFormat = ":method :url :status :response-time ms";
 
 let teaData=[]
 let nextID=1;
