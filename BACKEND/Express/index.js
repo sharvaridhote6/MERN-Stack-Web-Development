@@ -4,10 +4,26 @@ import logger from './logger.js';//logger is a custom module that logs all the r
 import morgan from 'morgan';//morgan is a middleware that logs all the requests that come in
 
 const app= express(); 
-const port= process.env.PORT || 3000;
+const port= process.env.PORT || 4000;
 app.use(express.json()); //middleware, meaning it will run before any route is hit and it will convert any data coming in the JSON format
 
 const morganFormat = ":method :url :status :response-time ms";
+
+app.use(
+    morgan(morganFormat, {
+      stream: {
+        write: (message) => {
+          const logObject = {
+            method: message.split(" ")[0],
+            url: message.split(" ")[1],
+            status: message.split(" ")[2],
+            responseTime: message.split(" ")[3],
+          };
+          logger.info(JSON.stringify(logObject));
+        },
+      },
+    })
+  );
 
 let teaData=[]
 let nextID=1;

@@ -10,8 +10,22 @@ Server error responses (500 – 599)
 nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 whenever we save the file, regardless of changes being made in it or not, every time the server restarts due to nodemon and the changes are reflected.
 
+npm init command and all the further instructions commands and details are used to create a package json file only for a project, 
 
+to create new folders- mkdir controllers, db, middlewares, models ,routes ,utils 
+to create one file-  New-Item -Path "app.js" -ItemType "File"
+to create many new files- 
+$files= "config.js", "index.js", "server.js"
+foreach ($file in $files){
+    New-Item -Path $file -ItemType File
+}
 
+dotenv and env- dotenv pkg helps to lead environment variables from a .env file into process.env, in env files we store sensitive data like api keys, passwords, etc. and load it using dotenv, we can also use env files to store configuration settings for the app.
+By default, the dotenv package looks for the .env file in the root directory of your project, not inside the src folder, hence always put the env/env.sample or any ther files related to env in the root directory of the project.
 
+cors-cross origin resource sharing, it is a a security mechanism that lets web pages access resources from other domains, meaning it is used to tell who should be able to talk to my database, it is an eg of a middleware
+middlewares- in between configurations, routes, and controllers, we can add middlewares to add some extra functionality to the app, like logging, authentication, etc., used to manipulate if a specific req(say for eg) comes to the server, so should we be accepting that or
+anything related to the req, res, next, etc. can be done in the middlewares, like accesisng cookies and headers, etc.
 
+dbs- always expect errors in this hence always use a trycatch blockq
 -->
