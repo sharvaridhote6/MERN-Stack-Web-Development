@@ -25,7 +25,8 @@ By default, the dotenv package looks for the .env file in the root directory of 
 
 cors-cross origin resource sharing, it is a a security mechanism that lets web pages access resources from other domains, meaning it is used to tell who should be able to talk to my database, it is an eg of a middleware
 middlewares- in between configurations, routes, and controllers, we can add middlewares to add some extra functionality to the app, like logging, authentication, etc., used to manipulate if a specific req(say for eg) comes to the server, so should we be accepting that or
-anything related to the req, res, next, etc. can be done in the middlewares, like accesisng cookies and headers, etc.
+anything related to the req, res, next, etc. can be done in the middlewares, like accesisng cookies and headers, etc. in this, next keywrod is used to pass on to the next middleware, if not used, the req will be stuck in the current middleware only, 
+prehook and posthook are also used in middlewares, prehook is used to run before the req is sent to the server and posthook is used to run after the req is sent to the server.
 
-dbs- always expect errors in this hence always use a trycatch blockq
+dbs- always expect errors in this hence always use a trycatch block
 -->
