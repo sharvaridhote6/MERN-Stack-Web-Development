@@ -10,13 +10,21 @@ import fs from 'fs';
     
 const uploadOnCloudinary = async(localFilePath)=>{
     try {
+        if(!localFilePath)return null
+        const response =await cloudinary.uploader.upload(
+            localFilePath,{
+                resource_type: "auto",
+            }
+        )
+        console.log("file uploaded on cloudinary");
         
     } catch (error) {
-        fs 
+        fs.unlink(localFilePath)
+        return null
     }
 }
 
-
+export default uploadOnCloudinary
 
     // Upload an image
     //  const uploadResult = await cloudinary.uploader
