@@ -1,6 +1,7 @@
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
+//functionality for contoller healthcheck
 const healthCheck = asyncHandler(async(req,res)=>{
     return res
     .status(200)

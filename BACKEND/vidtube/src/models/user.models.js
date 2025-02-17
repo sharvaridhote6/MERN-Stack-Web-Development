@@ -66,7 +66,7 @@ const userSchema = new Schema(
 //encrypt pass, never use arrow functions 
 userSchema.pre("save",async function(next){
 
-    if(!this.modified("password"))return next() //if the field being modified is not password, then return next, bec we want to encrypt the pass only when it is specifically modified, or saved for the first time
+    if(!this.isModified("password"))return next() //if the field being modified is not password, then return next, bec we want to encrypt the pass only when it is specifically modified, or saved for the first time
     this.password=bcrypt.hash(this.password,10) //10 is a no of algorithmic rounds, more rounds, more secure, but slower
     next()
 })
