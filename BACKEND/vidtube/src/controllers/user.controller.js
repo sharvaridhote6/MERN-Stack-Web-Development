@@ -1,8 +1,25 @@
-import { asyncHandler } from "../utils/asyncHandler.js"; //A middleware that wraps the async function to handle errors properly.
+import { asyncHandler } from "../utils/asyncHandler.js"; //A middleware that wraps the async function in a try catch block to handle errors properly.
 import {ApiError} from '../utils/ApiError.js'; //A custom error-handling class.
 import {User} from '../models/user.models.js' //A Mongoose model representing the users collection in the database.
-import {uploadOnCloudinary} from '../utils/cloudinary.js'
+import {uploadOnCloudinary, deleteFromCloudinary} from '../utils/cloudinary.js'
 import {ApiResponse} from '../utils/ApiResponse.js'
+
+const generateAccessAndRefreshToken= async (userId)=>{
+    try {
+        const user= await User.findById(userID)
+        if(!user){
+            throw new ApiError(404,"User not found") //err specific to user not found
+        }
+        const accessToken= user.generateAccessToken()
+        const refreshToken= user.generateRefreshToken()
+    
+        user.refreshToken= refreshToken
+        await user.save({validateBeforeSave:false}) //saves refresh tokens in the database 
+        return{accessToken, refreshToken}
+    } catch (error) {
+        throw new ApiError(500,"Something went wrong while generating access and refresh tokens ")//err specific to this
+    }
+}
 
 const registerUser= asyncHandler(async(req,res)=>{ // automatically catch errors without using try-catch blocks.
     const{fullname, email,username, password}=req.body //extracts all this info from the request body
@@ -14,6 +31,7 @@ const registerUser= asyncHandler(async(req,res)=>{ // automatically catch errors
         throw new ApiError(400,"All fields required")//if any field is empty, this error is thrown
     }
 
+    //checking if the user already exists
     const existedUser= await User.findOne({ //searches for user collection 
         $or:[{username},{email}] //or checks both fields
     })
@@ -32,46 +50,53 @@ const registerUser= asyncHandler(async(req,res)=>{ // automatically catch errors
     // const avatar= await uploadOnCloudinary(avatarLocalPath)//await makes the code wait until the file is uploaded and a response is received before moving to the next line, w/o that the function would start executing before uploads are complete
     // const coverImage = await uploadOnCloudinary(coverImage)
 
+    let avatar;
     try {
         avatar= await uploadOnCloudinary(avatarLocalPath)
         console.log("Uploaded avatar", avatar)
     } catch (error) {
         console.log('Error uploading avatar', error);
-        throw new ApiError(500, "FAiled to upload avatar")
+        throw new ApiError(500, "Failed to upload avatar")
+        
+    }
+    let coverImage;
+    try {
+        coverImage =await uploadOnCloudinary(coverLocalPath)
+        console.log("Uploaded coverImage", coverImage)
+    } catch (error) {
+        console.log('Error uploading coverImage', error);
+        throw new ApiError(500, "Failed to upload coverImage")
         
     }
 
     try {
-        let coverImage =await uploadOnCloudinary(avatarLocalPath)
-        console.log("Uploaded coverImage", avatar)
+        const user =await User.create({
+            fullname,
+            avatar: avatar.url || "",
+            coverImage: coverImage?.url || "",
+            email,
+            password,
+            username: username.toLowerCase()
+        })
+    
+        const createdUser= await User.findById(user._id).select( "-password -refreshToken")
+    
+        if(!createdUser){
+            throw new ApiError(500,"Something went wrong")
+        }
+        return res
+        .status(201)
+        .json(new ApiResponse(200,createdUser, "User registered successfully."))
     } catch (error) {
-        console.log('Error uploading coverImage', error);
-        throw new ApiError(500, "FAiled to upload coverImage")
-        
+        console.log("User creation failed");
+        if (avatar) {
+            await deleteFromCloudinary(avatar.public_id)
+        }
+        if (coverImage) {
+            await deleteFromCloudinary(coverImage.public_id)
+        }
+        throw new ApiError(500,"Something went wrong, images are deleted")
     }
-
-    const user =await User.create({
-        fullname,
-        avatar: avatar.url, 
-        coverImage: coverImage?.url || "",
-        email,
-        password,
-        username:username.toLowerCase()
-    })
-
-    const createdUser= await User.findById(user._id).select(
-        "-password -refreshToken"
-    )
-
-    if(!createdUser){
-        throw new ApiError(500,"Something went wrong")
-    }
-    return res
-    .status(201)
-    .json(new ApiResponse(200,createdUser, "User registered successfully."))
 })
 
-export {
-    registerUser,
-    
-}
+export {registerUser}
