@@ -11,9 +11,9 @@
 // updatedAt date
 // the id, uniqueness is automatically handled by mongodb, so we don't need to specify it in the schema, either we can create our own id or let mongo create it for us
 
-import mongoose, {Schema} from 'mongoose';
-import bcrypt from 'bcrypt';
-import JWT from 'jsonwebtoken';
+import mongoose, {Schema} from 'mongoose'; //
+import bcrypt from 'bcrypt';// used for password hashing
+import JWT from 'jsonwebtoken'; 
 
 const userSchema = new Schema(
     {

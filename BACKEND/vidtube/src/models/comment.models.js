@@ -1,5 +1,6 @@
 import mongoose, {Schema} from "mongoose";
-import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
+import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";//Pagination is the process of splitting large amounts of data into smaller, 
+// manageable chunks (pages) instead of returning everything at once, hence it works to handle large amount of comments, page 1-20comments, etc
 
 const commentSchema = new Schema(
     {

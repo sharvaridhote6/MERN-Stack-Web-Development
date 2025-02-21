@@ -1,5 +1,4 @@
 import multer from "multer";
-
 // Multer configuration, diskStorage is used to configure the destination and filename of the file
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
