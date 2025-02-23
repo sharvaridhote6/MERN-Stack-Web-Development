@@ -101,3 +101,4 @@ userSchema.methods.generateRefreshToken= function (){
 export const User= mongoose.model('User', userSchema);
 //in mongodb, mongoose creates a structure, its builds a new model, a doc/structure in the db,and that will be called user, and we'll refer to the userSchema created
 
+
