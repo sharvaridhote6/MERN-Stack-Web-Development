@@ -51,4 +51,40 @@ constant.js- holds constant vales throughout the application
 multer- middleware for handling file uploads, express.js cannot handle file uploads so we use this to parse the uploaded files from requests,
 store those files.
 
+HttpOnly Cookies are More Secure- prevents javasc from accessing tokens, prevents cross-site attacks, handles cookies automatically
+access tokens are used to store the ID temporarily(since its short lived) and those get expired when the user logs out or when the
+setTimeout is done given specifically to that token, refT is used to generate a new token whenever the user logs in again, access token is 
+the only way the user and server communicate, when this accessT exps, then we can't keep regenarating it all the time, so we keep a secret code
+which when passed to the user by the server, it knows to generate a new token, how?- when we send the sec code, user goes to a route (which is posssibly
+there) and thru that it generates 2 tokens- access and refresh, 
+
+
+Code	                        Meaning	                                                        When to Use
+400 Bad Request 	The request is malformed or has missing/invalid data.	     Missing required fields, invalid JSON format, validation errors (e.g., an empty username).
+401 Unauthorized	Authentication is required and has failed or is missing.	Invalid/missing access token, wrong credentials in login.
+403 Forbidden	   The user is authenticated but doesn’t have permission.	  A user tries to delete another user's account without permission.
+404 Not Found	   The requested resource doesn’t exist.                    Looking up a user that doesn't exist.
+409 Conflict	   The request conflicts with an existing resource.	         Registering a user with an email that already exists.
+422 Unprocessable	The request is valid but can’t be processed.	          Trying to upload an image that is too large or invalid.
+    Entity
+500 Internal Server Error	A general error for unexpected failures.	                Uncaught exceptions, database connection failures.
+502 Bad Gateway	            Server received an invalid response from another server.	When calling an external API and it fails.
+503 Service Unavailable	    Server is temporarily overloaded or down for maintenance.	Rate limits exceeded, database temporarily down.
+
+MOngoDB aggregation pipelines- in the db, we have a lot of data, so to filter, group, calculate, perform some operation, etc on that data is done by this, 
+they're built in stages 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -->
