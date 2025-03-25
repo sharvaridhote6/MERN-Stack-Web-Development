@@ -12,7 +12,7 @@ import jwt from 'jsonwebtoken';
 const generateAccessAndRefreshToken= async (userId)=>{
     try {
         const user= await User.findById(userID)
-        if(!user){
+        if(!user){  
             throw new ApiError(404,"User not found") //err specific to user not found
         }
         const accessToken= user.generateAccessToken() //used for authentication, short lived token
