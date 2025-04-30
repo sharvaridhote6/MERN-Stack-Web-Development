@@ -145,6 +145,29 @@ ls(gives options like HEAD, logs, refs, config, description, hooks, info, object
 
 .gitignore is used to specifically ignore the files which we dont want to track, like node_modules, .env, .DS_Store, .vscode, .idea, and written as
 node_modules/, etc. then we can run the git add . cmd
-  -->
+-->
+
+to create a git repo after making a file in vsc-
+<!-- git init
+ git branch -M main
+ git add .
+ git commit -m "message"
+ git remote add origin https://github.com/sharvaridhote6/name-of-the-repo.git 
+ git push -u origin main-->
 
 
+
+ <!-- FULL STACK AUTHENTICATION SYSTEM NEXTJS,MONGODB, MONGOOSE,NODEMAIL
+signup, login, profile section, reset, verify
+
+IN next js- everything is in src directory, in which there is app directory which has frontend and backend, there are other files middlewares, models, helpers, etc etc
+backend portion is written in api folder (app->api->backend files) the file names there are a route and in frontend they're as page, 
+we dont need express js or any other framework which is used for routing, we can directly write the api in next js
+.env is used to keep all the db usernames/ passwords or anything sensitive secure, so that when deploying in the production it is not exposed to the public, we can use dotenv package to access the env variables in our code
+
+1) npx create-next-app@latest (project name) = used for creating nextjs and react app with all the dependencies included 
+where page.tsx in src in app is for the client-side, for frontend, layout is like a wrapper, meaning we have a common footer/ navigation bar 
+2) npm i axios-(library to make http requests) bcryptjs-(lib to encrypt the password, tokens) (securely sending tokens from the server side)- jsonwebtoken nodemailer-(lib to shoot out an email)
+react-hot-toast(-for notifications like successfully signed up) mongoose-(mongoDB object modeling tool, meaning it talks to mongodb a wrapper around it )
+
+-->
