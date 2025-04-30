@@ -1,5 +1,5 @@
 // flow of the code-
-// server is craeted using createServer
+// server is created using createServer
 // file path is calculated for each incoming request
 // extension name is extracted from the file path
 // mime types are defined
@@ -13,13 +13,15 @@ const port= 3001;
 
 //creates a server object
 const server = http.createServer((req,res)=>{  
-    const filePath= path.join(__dirname, req.url === '/' ? "index.html":req.url) //dirname gives the absolute path to the current directory of the script, joins the current directory with the requested URL and stores it in filePath, if the requested URL is '/', it serves the index.html file and if not, it serves the requested file
+    const filePath= path.join(__dirname, req.url === '/' ? "index.html":req.url) 
     console.log(filePath);
-    
+//dirname gives the absolute path to the current directory of the script, joins the current directory with the requested URL and stores it in filePath, if the requested URL is '/', 
+// it serves the index.html file and if not, it serves the requested file    
+// '/' ? "index.html":req.url is like if else blocks, if requested url is /, then if true, (?) meaning index.html is executed, if false, (:) meaning req.url is executed
 
     const extName= String(path.extname(filePath)).toLowerCase()//extracts the extension of the file and converts it to lowercase
 
-    const mimeTypes={
+    const mimeTypes={ //mime types are used to specify the type of content being sent in the response header
     '.html':'text/html',
     '.css':'text/css',
     '.js':'text/javascript',
@@ -27,7 +29,8 @@ const server = http.createServer((req,res)=>{
     '.jpeg':'text/jpeg',
     }
 
-    const contentType = mimeTypes[extName] || 'application/octet-stream'//if the extension is not found, it defaults to application/octet-stream, which is a binary file, and is used for unknown file types
+    const contentType = mimeTypes[extName] || 'application/octet-stream'
+    //if the extension is not found, it defaults to application/octet-stream, which is a binary file, and is used for unknown file types
 
     fs.readFile(filePath,(err,content)=>{
         if(err){
